@@ -654,10 +654,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mail-user-agent" class="md-nav__link">
     <span class="md-ellipsis">
       Mail User Agent
@@ -665,18 +664,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#mail-transfer-agentsmtp" class="md-nav__link">
     <span class="md-ellipsis">
       Mail Transfer Agent/SMTP
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -687,20 +681,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mail Delivery Agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pop3" class="md-nav__link">
     <span class="md-ellipsis">
       POP3
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="POP3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#imap" class="md-nav__link">
     <span class="md-ellipsis">
       IMAP
@@ -708,13 +700,8 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting-email-delivery-failure" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting email delivery failure
@@ -722,18 +709,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#breakdown-of-the-mailing-process-using-qmail" class="md-nav__link">
     <span class="md-ellipsis">
       Breakdown of the mailing process using qmail
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -825,10 +807,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mail-user-agent" class="md-nav__link">
     <span class="md-ellipsis">
       Mail User Agent
@@ -836,18 +817,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#mail-transfer-agentsmtp" class="md-nav__link">
     <span class="md-ellipsis">
       Mail Transfer Agent/SMTP
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -858,20 +834,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mail Delivery Agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pop3" class="md-nav__link">
     <span class="md-ellipsis">
       POP3
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="POP3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#imap" class="md-nav__link">
     <span class="md-ellipsis">
       IMAP
@@ -879,13 +853,8 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting-email-delivery-failure" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting email delivery failure
@@ -893,18 +862,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#breakdown-of-the-mailing-process-using-qmail" class="md-nav__link">
     <span class="md-ellipsis">
       Breakdown of the mailing process using qmail
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -937,10 +901,10 @@
 <em>[DKIM]: Domain Keys Identified Mail
 </em>[DMARC]: Domain-based Message Authentication and Conformance</p>
 <h3 id="process">Process</h3>
-<h4 id="mail-user-agent">Mail User Agent</h4>
+<h3 id="mail-user-agent">Mail User Agent</h3>
 <p>MUA (Mail User Agent) or an email client is a software or a web application that allows users to compose, send, and manage their emails. Examples include Microsoft Outlook, Mozilla Thunderbird, and Apple Mail (software application) and RoundCube, SquirrelMail and Horde (web applications). </p>
 <p>Our customers can also send emails through their websites using default PHP mailer or SMTP plugins - form submissions are one example. If form submission is set up, their customers will fill out the form and the website will send out an email automatically as a “quasi” MUA.</p>
-<h4 id="mail-transfer-agentsmtp">Mail Transfer Agent/SMTP</h4>
+<h3 id="mail-transfer-agentsmtp">Mail Transfer Agent/SMTP</h3>
 <p>Once an email is sent, an email client will communicate with an MTA - Mail Transfer Agent - the SMTP server. </p>
 <p>SMTP server utilizes software like exim, qmail or postifx to send a message to the recipient's mail server. The SMTP server will take an email message from a client and prepare it for a delivery by adding necessary headers like sender and recipient addresses and append the details required for a transmission. </p>
 <p>Afterwards, the SMTP server performs a DNS lookup to find the recipient server. Once the recipient’s mail server is identified, your email server establishes a connection with it using the SMTP (Simple Mail Transfer Protocol) which facilitates the transmission of email messages between servers over ports  25/465/587. The email message is transferred from the sender's server to the recipient's server through this connection.</p>
@@ -949,12 +913,12 @@
 <li>DNS record verification - SPF, DKIM, DMARC, PTR</li>
 <li>Server side SPAM rules</li>
 </ul>
-<h2 id="mail-delivery-agent">Mail Delivery Agent</h2>
+<h3 id="mail-delivery-agent">Mail Delivery Agent</h3>
 <p>When the validity of the email is verified, recipient SMTP server will invoke MDA like Dovecot to store the incoming email in the proper user's mailbox.  Once the email is delivered, MUA utilizes IMAP/POP3 protocols to retrieve emails from a mail server for the user.</p>
 <h3 id="pop3">POP3</h3>
 <p>Post Office Protocol 3 is an email protocol that clients use to retrieve email from a mail server. POP3 clients connect, retrieve all messages, store them on the client computer, and finally delete them from the server (although there is an option for email clients to leave the message on the server or simply download a local copy). POP3 treats the mailbox as a single store, and has no concept of folders. It also provides a completely static view of the current state of the mailbox and does not provide a mechanism to show any external changes in state during the session.</p>
 <p>This design of POP and its procedures was driven by the need of users having only temporary Internet connections, such as dial-up access, allowing these users to retrieve email when connected, and subsequently to view and manipulate the retrieved messages when offline. A POP3 server listens on port number 110 for service requests or port number 995 for secure connection (POP3S).</p>
-<h5 id="imap">IMAP</h5>
+<h3 id="imap">IMAP</h3>
 <p>The Internet Message Access Protocol allows a client to access and manipulate electronic mail messages on a server, as well as manipulation of mailboxes  in a way that is functionally equivalent to local folders. It includes operations for creating, deleting and renaming mailboxes; checking for new messages; removing messages permanently; setting and clearing flags (read, replied to, forwarded, deleted etc); searching; and selective fetching of message attributes, texts and portions thereof. IMAP4 server listens on port 143 which is an unsecure channel or port 993 which is an implicit TLS port.</p>
 <p>Visual
 ![[Mail delivery.png]]</p>
