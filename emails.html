@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#process" class="md-skip">
+        <a href="#keywords" class="md-skip">
           Skip to content
         </a>
       
@@ -639,15 +639,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#process" class="md-nav__link">
+  <a href="#keywords" class="md-nav__link">
     <span class="md-ellipsis">
-      Process
+      Keywords:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#mail-user-agent" class="md-nav__link">
     <span class="md-ellipsis">
       Mail User Agent
@@ -655,8 +665,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#mail-transfer-agentsmtp" class="md-nav__link">
     <span class="md-ellipsis">
       Mail Transfer Agent/SMTP
@@ -664,13 +674,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#mail-delivery-agent" class="md-nav__link">
     <span class="md-ellipsis">
       Mail Delivery Agent
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -783,15 +798,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#process" class="md-nav__link">
+  <a href="#keywords" class="md-nav__link">
     <span class="md-ellipsis">
-      Process
+      Keywords:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#mail-user-agent" class="md-nav__link">
     <span class="md-ellipsis">
       Mail User Agent
@@ -799,8 +824,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#mail-transfer-agentsmtp" class="md-nav__link">
     <span class="md-ellipsis">
       Mail Transfer Agent/SMTP
@@ -808,13 +833,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#mail-delivery-agent" class="md-nav__link">
     <span class="md-ellipsis">
       Mail Delivery Agent
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -871,7 +901,20 @@
 
   <h1>Email</h1>
 
-<h3 id="process">Process</h3>
+<h2 id="keywords">Keywords:</h2>
+<ul>
+<li>MUA (Mail User Agent) - Webmails, Clients (Outlook, Thunderbird)</li>
+<li>MDA (Mail Delivery Agent)</li>
+<li>MTA (Mail Transfer Agent)</li>
+<li>SMTP (Simple Mail Transfer Protocol)</li>
+<li>IMAP (Internet Message Access Protocol)</li>
+<li>POP3 (Post Office Protocol 3)</li>
+<li>MX records (Mail Exchange Records)</li>
+<li>SPF (Sender Policy Framework)</li>
+<li>DKIM (Domain Keys Identified Mail)</li>
+<li>DMARC (Domain-based Message Authentication and Conformance)</li>
+</ul>
+<h2 id="process">Process</h2>
 <h3 id="mail-user-agent">Mail User Agent</h3>
 <p>MUA (Mail User Agent) or an email client is a software or a web application that allows users to compose, send, and manage their emails. Examples include Microsoft Outlook, Mozilla Thunderbird, and Apple Mail (software application) and RoundCube, SquirrelMail and Horde (web applications). </p>
 <p>Our customers can also send emails through their websites using default PHP mailer or SMTP plugins - form submissions are one example. If form submission is set up, their customers will fill out the form and the website will send out an email automatically as a “quasi” MUA.</p>
@@ -886,14 +929,14 @@
 </ul>
 <h3 id="mail-delivery-agent">Mail Delivery Agent</h3>
 <p>When the validity of the email is verified, recipient SMTP server will invoke MDA like Dovecot to store the incoming email in the proper user's mailbox.  Once the email is delivered, MUA utilizes IMAP/POP3 protocols to retrieve emails from a mail server for the user.</p>
-<h3 id="pop3">POP3</h3>
+<h2 id="pop3">POP3</h2>
 <p>Post Office Protocol 3 is an email protocol that clients use to retrieve email from a mail server. POP3 clients connect, retrieve all messages, store them on the client computer, and finally delete them from the server (although there is an option for email clients to leave the message on the server or simply download a local copy). POP3 treats the mailbox as a single store, and has no concept of folders. It also provides a completely static view of the current state of the mailbox and does not provide a mechanism to show any external changes in state during the session.</p>
 <p>This design of POP and its procedures was driven by the need of users having only temporary Internet connections, such as dial-up access, allowing these users to retrieve email when connected, and subsequently to view and manipulate the retrieved messages when offline. A POP3 server listens on port number 110 for service requests or port number 995 for secure connection (POP3S).</p>
-<h3 id="imap">IMAP</h3>
+<h2 id="imap">IMAP</h2>
 <p>The Internet Message Access Protocol allows a client to access and manipulate electronic mail messages on a server, as well as manipulation of mailboxes  in a way that is functionally equivalent to local folders. It includes operations for creating, deleting and renaming mailboxes; checking for new messages; removing messages permanently; setting and clearing flags (read, replied to, forwarded, deleted etc); searching; and selective fetching of message attributes, texts and portions thereof. IMAP4 server listens on port 143 which is an unsecure channel or port 993 which is an implicit TLS port.</p>
 <p>Visual
 ![[Mail delivery.png]]</p>
-<h3 id="troubleshooting-email-delivery-failure">Troubleshooting email delivery failure</h3>
+<h2 id="troubleshooting-email-delivery-failure">Troubleshooting email delivery failure</h2>
 <p>Each step of this process can be a potential point of failure (that's why emails are so hard to troubleshoot). </p>
 <ol>
 <li>MUA: 
@@ -911,7 +954,7 @@
     On managed apps we use dovecot. You can check the dovecot logs for information such as whether the user logging in is using IMAP/POP3 connection for example.
         <code>cat /var/log/dovecot/dovecot.log</code></li>
 </ol>
-<h3 id="breakdown-of-the-mailing-process-using-qmail">Breakdown of the mailing process using qmail</h3>
+<h2 id="breakdown-of-the-mailing-process-using-qmail">Breakdown of the mailing process using qmail</h2>
 <p>Example of qmail log:</p>
 <pre><code>$ cat /var/log/send/current | tai64nlocal | grep 574692321
 2023-07-26 14:28:27.917076500 info msg 574692321: bytes 16593 from &lt;outlook_553EE1FF76D81E16@outlook.com&gt; qp 5228 uid 108
@@ -991,16 +1034,6 @@ Lookup command:
 <li>POP and IMAP (cloudhost and recent dedicated servers) <code>/var/log/dovecot</code></li>
 <li>Inbound SpamAssassin scoring <code>/var/log/maillog</code></li>
 </ul>
-<p><em>[MUA]: Mail User Agent
-</em>[MDA]: Mail Delivery Agent
-<em>[MTA]: Mail Transfer Agent
-</em>[SMTP]: Simple Mail Transfer Protocol
-<em>[IMAP]: Internet Message Access Protocol
-</em>[POP3]: Post Office Protocol 3
-<em>[MX]: Mail Exchange Records
-</em>[SPF]: Sender Policy Framework
-<em>[DKIM]: Domain Keys Identified Mail
-</em>[DMARC]: Domain-based Message Authentication and Conformance</p>
 
 
 

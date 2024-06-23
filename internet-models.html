@@ -902,7 +902,7 @@
 <li>Layer 2: Data Link</li>
 <li>Layer 1: Physical</li>
 </ul>
-<h3 id="layer-7-application-layer">Layer  7. Application layer:</h3>
+<h2 id="layer-7-application-layer">Layer  7. Application layer:</h2>
 <p>Being the topmost layer of the OSI model, this is the only layer that directly interacts with data from the user. Software applications like web browsers and email clients rely on the application layer to initiate communications. </p>
 <p>The software applications are not part of the application layer by themselves, but rather the application layer is responsible for the protocols and data manipulation that the software relies on to present meaningful data to the user.</p>
 <p>Once the user's data has been gathered, application layer will make a connection with the bottom layer - presentation layer for further manipulation. </p>
@@ -915,7 +915,7 @@
 <li>[[DHCP]]</li>
 <li>[[SSH]]</li>
 </ul>
-<h3 id="layer-6-presentation-layer">Layer 6. Presentation layer:</h3>
+<h2 id="layer-6-presentation-layer">Layer 6. Presentation layer:</h2>
 <p>The presentation layer is responsible for handling the syntax and semantics of the information exchanged between network devices. </p>
 <p>It handles data conversion, encryption and compression.</p>
 <ul>
@@ -923,10 +923,10 @@
 <li>Data Encryption </li>
 <li>Data compression </li>
 </ul>
-<h3 id="layer-5-session-layer">Layer 5. Session layer</h3>
+<h2 id="layer-5-session-layer">Layer 5. Session layer</h2>
 <p>In a network, multiple applications running on different systems may need to communicate with one another. This process is called a session, and the Session layer handles these interactions. It provides the mechanisms for establishing a session between applications, maintaining the session and ending the session once the communication is complete. It also provides mechanisms for synchronization and recovery in case of communication failure or interruptions. </p>
 <p>Lets say we are running an email client, a web browser and a torrent applications at the same time. Each of these applications will be using a different session, which is managed by this layer. This is the reason why we can at the same time have a browser, mail client and torrent client open for example. This layer will assign each of these applications a session so that the data can be managed accordingly. </p>
-<h3 id="layer-4-transport-layer-segmentation-and-reassembly">Layer 4: Transport Layer - Segmentation and Reassembly</h3>
+<h2 id="layer-4-transport-layer-segmentation-and-reassembly">Layer 4: Transport Layer - Segmentation and Reassembly</h2>
 <p>Unlike the name would suggest, transport layer does not transport data between different devices. Transport layer's job is to break down data from the upper layers into digestible chunks and to append header with source and destination [[PORTS|port]] so that the machines on a network know which service said data chunks are meant for.</p>
 <ul>
 <li><strong>Source port</strong> is required on the source machine in cases where we have multiple applications using the same protocol. If, for example, we had multiple browsers installed, when we try to access a website on one through HTTP, we do not want the result to be opened in another browser. Source port will be a random number between 1024-65535.</li>
@@ -954,7 +954,7 @@
 </ul>
 <p>Depending on whether the connection favors performance or stability, we differentiate two transport layer protocols:
 - [[TCP vs UDP]]</p>
-<h3 id="layer-3-network-layer">Layer 3: Network Layer</h3>
+<h2 id="layer-3-network-layer">Layer 3: Network Layer</h2>
 <p>Because these segments will need to travel all over the Internet along different pathways, we need a mechanism that knows once the segment does arrive, which pathway it's supposed to be sent down to so that it all gets to the final destination. This is handled by the Network layer.</p>
 <p>Network layer will take the segment from the Transport layer, re-encapsulate it by adding a header to it which will have a source and destination IP address. We call this chunk a <strong>packet</strong>.</p>
 <p>By far the most common protocol that is used on the Network layer is IPv4 (but it's not the only one).</p>
@@ -964,19 +964,19 @@
 - Host-to-host delivery or Forwarding - process in which the network layer transmits or forwards the data via routers after determining the best path.
 - Logical subnetting - dividing a bigger network into smaller chunks so that IP addresses are used more efficiently. 
 - Network Address Translation (NAT) - process of converting any private IP address into a public IP address.</p>
-<h4 id="network-layer-protocols">Network Layer protocols:</h4>
+<h3 id="network-layer-protocols">Network Layer protocols:</h3>
 <ul>
 <li>[[Internet Protocol]]</li>
 <li>[[ICMP]]</li>
 </ul>
-<h3 id="layer-2-data-link-layer">Layer 2: Data-Link Layer</h3>
+<h2 id="layer-2-data-link-layer">Layer 2: Data-Link Layer</h2>
 <p>When we say "link", we mean two devices connecting together. Everything up to this layer was a machine readable data. Data-Link layer has a job to take said data and connect it to the last layer - Physical layer. It does this by taking the packet provided by the Network layer and encapsulates it in a <strong>frame</strong>. </p>
 <p>Data-Link does splits its job into  two sublayers:
 - <strong>Logical Link Control</strong> (LLC) layer talks to the operating system through drivers and handles multiple network protocols and provides flow control.
 - <strong>Media Access Control</strong> (MAC) layer creates and addresses the frame. It adds NIC’s MAC address and attaches MAC addresses to the frame, adds and checks the FCS and ensures that frames are sent along the network cabling. </p>
 <p>A frame will consist of a <strong>header</strong> and a <strong>trailer</strong> attached to it. Trailer exists because much like all the other layers, Data-Link is also governed by protocols (Ethernet being the most common). </p>
 <p>Data transmission involves a stream of signals through a physical device, and in nature there are many signals which are just static noise. In order to differentiate data transferred between devices from a static noise, we attach a trailer to the packet. With it, destination device can recognize said stream of data and know how to handle it.</p>
-<h3 id="layer-1-physical-layer">Layer 1: Physical layer</h3>
+<h2 id="layer-1-physical-layer">Layer 1: Physical layer</h2>
 <p>Network needs a physical channel through which the data can be transferred. Most common type is the UTP cable (unshielded twisted pair) which can transmit and receive data, as well as a central box (Hub/Switch) that handles a flow from one machine to another. Each system on a network has a cable connected to the central box.</p>
 <p>Network Interface Card (NIC) serves as the interface between the PC and the network. Each NIC has a unique identifier with a 48-bit value called media access control address (MAC address) so data is transferred to the right system. No two NICs ever share the same MAC address. Those numbers are provided by Institute of Electrical and Electronics Engineers (IEEE) to the companies making NICs, which often print the numbers onto the device itself using hexadecimal notation. 
 - Example: 00–40–05–60–7D–49</p>
@@ -996,13 +996,13 @@
 <p>PDU - protocol data unit</p>
 <h1 id="tcpip-model">TCP/IP model</h1>
 <p>The reason why TCP/IP model has this name is because the persons who developed it focused primarily on these two protocols. Back in the day of Arpanet, they needed to be sure that the data was reliable.</p>
-<h3 id="the-application-layer">The Application layer</h3>
+<h2 id="the-application-layer">The Application layer</h2>
 <p>The Application layer combines the top three layers of the OSI model and its responsible for providing network services and applications to end-users.</p>
 <p>Although we can say that the OSI Presentation layer is part of the TCP/IP Application layer, no application requires any particular form of presentation as seen by the OSI model. Applications in TCP/IP already use standardized formats that everyone understands. </p>
 <p>Furthermore, Session Layer's responsibilities are also handled by applications themselves - every application has to be able to initiate, control and disconnect from a remote system. There is no clearly defined way to do this and each TCP/IP application uses its own methods.</p>
 <p>All applications can talk to the network, so long they are part of the network. They also need to be part of the network to function: Web browsers, e-mail clients, multiplayer games etc.</p>
 <p>Just like in the OSI model, the Application Layer will produce a stream of data which will be handed off to the layer below it.</p>
-<h3 id="the-transport-layer">The Transport Layer</h3>
+<h2 id="the-transport-layer">The Transport Layer</h2>
 <p>The Transport Layer is equivalent to the OSI Transport layer. It’s responsible for providing reliable end-to-end communication between applications running on different hosts. </p>
 <p>Much like it's OSI equivalent, Transport Layer will produce <strong>segments</strong> from the data that the Application Layer provided. It doesn't care how data is delivered because at some point of the data transfer, the destination device will have to know how to handle the data which Application Layer produced.</p>
 <p>Transport Layer includes two protocols - Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). </p>
@@ -1026,12 +1026,12 @@
 </ul>
 <p>UDP on the other hand also gets the data from the Application layer and adds port and length numbers, as well as a checksum to create a container called a UDP datagram. UDP doesn’t care if the receiving computer gets all its data, which is why UDP datagram lacks most of the fields found in TCP segments.</p>
 <p>In summary, data arrives from the Application layer which is then broken up into fragments, given destination, source and sequence numbers and then shipped to the Internetworking Layer to be wrapped into an IP packet. </p>
-<h3 id="the-internetworking-layer">The Internetworking Layer</h3>
+<h2 id="the-internetworking-layer">The Internetworking Layer</h2>
 <p>The Internetworking layer is equivalent to OSI Network Layer and is responsible for handling logical addressing and routing (forwarding). </p>
 <p>The main protocol used on this layer Internet Protocol which provides a unique IP address to each device on the network. Any device or protocol that deals with pure IP packets sits on the Internetworking Layer. </p>
 <p>The Internet layer doesn’t care what type of data the IP packet carries, nor does it care whether the data gets there in good order or not. That is handled by the Transport layer.</p>
 <p>Internetworking layer will take the segment provided by the Transport Layer and will create a <strong>packet</strong>.</p>
-<h3 id="network-access-layer">Network Access Layer</h3>
+<h2 id="network-access-layer">Network Access Layer</h2>
 <p>Network Access Layer groups up the last two layers of the OSI model - Data-Link and Physical. The keyword in this layer is <strong>access</strong> - this layer deals with any physical (hardware) part of the network.</p>
 
 
