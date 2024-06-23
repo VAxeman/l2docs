@@ -6,6 +6,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xeman.github.io/l2docs/FTP.html</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xeman.github.io/l2docs/HTTP-HTTPS.html</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xeman.github.io/l2docs/TCP-vs-UDP.html</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
@@ -27,6 +37,11 @@
     </url>
     <url>
          <loc>https://xeman.github.io/l2docs/domains.html</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xeman.github.io/l2docs/emails.html</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
