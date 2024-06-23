@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://xeman.github.io/l2docs/cloudsites.html">
+        <link rel="canonical" href="https://xeman.github.io/l2docs/domains.html">
       
       
-        <link rel="prev" href="pbe.html">
+        <link rel="prev" href="dns.html">
       
       
-        <link rel="next" href="bashrc.html">
+        <link rel="next" href="ping-traceroute-netstat.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>CloudSites - J/L2 Docs</title>
+        <title>Domains - J/L2 Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#why1" class="md-skip">
+        <a href="#domain-name" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CloudSites
+              Domains
             
           </span>
         </div>
@@ -222,8 +222,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -233,11 +235,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -251,7 +253,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Networking
@@ -283,10 +285,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="domains.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Domains
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="domains.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -295,6 +315,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain name
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Domain name">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fqdn-fully-qualified-domain-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      FQDN - Fully qualified domain name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSL
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -462,19 +533,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="cloudsites.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="cloudsites.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -483,7 +545,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -525,8 +586,47 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain name
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Domain name">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fqdn-fully-qualified-domain-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      FQDN - Fully qualified domain name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSL
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -541,7 +641,7 @@
                   
 
 
-<div id="mkdocs-encrypted-content" style="display:none">TkW9n3tmcWRAPpSgQqIEYQ==;o0ZuRYvGt/JmHcl5MhpRdl8EZusa+0YRT6VJBBPWmKs=</div>
+<div id="mkdocs-encrypted-content" style="display:none">SS3CXSVqEDmMQbkPvCDdjw==;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</div>
 <div id="mkdocs-decrypted-content">
     <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
         <h1>This content is protected with AES encryption. </h1>
@@ -554,7 +654,7 @@
 
 <script type="text/javascript">
 var encryptcontent_id = "encryptcontent_1";
-var encryptcontent_path = "l2docs/cloudsites.html";
+var encryptcontent_path = "l2docs/domains.html";
 var decryption_failure_message = "Invalid password.";
 var encryptcontent_keystore = ["mKkQAr21qnEFtj+tF40vjw==;OmZWkB2yM7hTgzIRKT17AexJ7BFEIS4P5K8AdaKugreLsoYCI2OWhsHckzD19Vic4jGfBdhRN/hM8fZH7yBfR3AwZ+NOCN2xw3whWdOOeUUb0IzKQrb50SpE23+CJCpH;PONngt6I3lw6qOUPPDcWMQ=="];
 var encryptcontent_obfuscate = 0;

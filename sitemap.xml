@@ -21,12 +21,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xeman.github.io/l2docs/domains.html</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xeman.github.io/l2docs/magento.html</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xeman.github.io/l2docs/pbe.html</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xeman.github.io/l2docs/ping-traceroute-netstat.html</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xeman.github.io/l2docs/ssl.html</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
