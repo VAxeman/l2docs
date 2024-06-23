@@ -763,14 +763,16 @@
 <p>By encrypting any data that goes between a user and a web server, SSL ensures that anyone who tries to intercept this data will only see a garbled mix of characters that is nearly impossible to decrypt. </p>
 <p>What is an SSL certificate?
 An SSL certificate is a text file hosted in a website's origin server which contains the website's public key and devices attempting to communicate with the origin server will reference this file to obtain the public key and verify the server's identity. </p>
-<p>In order to get an SSL certificate, a Certificate Signing Request (CSR) has to be created first. Information that CSR includes is:
-* Fully-Qualified Domain Name (FQDN)
-* Legal name of the organization
-* Division of the Organization
-* City
-* Region
-* Country
-* Email address</p>
+<p>In order to get an SSL certificate, a Certificate Signing Request (CSR) has to be created first. Information that CSR includes is:</p>
+<ul>
+<li>Fully-Qualified Domain Name (FQDN)</li>
+<li>Legal name of the organization</li>
+<li>Division of the Organization</li>
+<li>City</li>
+<li>Region</li>
+<li>Country</li>
+<li>Email address</li>
+</ul>
 <p>Once a CSR is created, an SSL certificate can then be purchased from the CA. A CA is an outside organization, a trusted third party, that generates and gives out SSL certificates. Once the certificate is issued, it needs to be installed and activated on the website's origin server and when it's activated on the origin server, the website will be able to load over HTTPS and all traffic to and from the website will be encrypted and secure.</p>
 <p>SSL certificates include the following information in a single data file:
 * The domain name that the certificate was issued for
