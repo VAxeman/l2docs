@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xeman.github.io/l2docs/protocol.html</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xeman.github.io/l2docs/ssl.html</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
