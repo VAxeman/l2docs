@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://xeman.github.io/l2docs/index.html">
+        <link rel="canonical" href="https://xeman.github.io/l2docs/TCP-vs-UDP.html">
       
       
+        <link rel="prev" href="ssl.html">
       
-        <link rel="next" href="dns.html">
+      
+        <link rel="next" href="internet-models.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>J/L2 Docs</title>
+        <title>TCP/UDP - J/L2 Docs</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introductory" class="md-skip">
+        <a href="#tcp" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              TCP/UDP
             
           </span>
         </div>
@@ -200,19 +202,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -221,7 +214,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -230,8 +222,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -241,11 +235,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -259,7 +253,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Networking
@@ -354,10 +348,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="TCP-vs-UDP.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TCP/UDP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="TCP-vs-UDP.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -366,6 +380,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connection-establishment-three-way-handshake" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection establishment (Three-way handshake):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data transfer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-termination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection termination
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -568,6 +629,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connection-establishment-three-way-handshake" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection establishment (Three-way handshake):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data transfer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-termination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection termination
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -581,7 +677,7 @@
                   
 
 
-<div id="mkdocs-encrypted-content" style="display:none">DWsjF/rMR5HuDlfTJYA2wg==;Y63auI0PV1YmNFOyEJiK2wdD+cq5AUMGUjX3QKPV4mX0DCPKlTC5j/9As+LEhyoatjvKgbd4mKNankxmWfz6TgdTasi8lVsWH4MXwMstaMuU0O4qHkfktQU8mFQZIdGpX9Cc4/aFzxv5fABiHego9KawGXqVhY5R4Jp1p6dw+qkBY6mKE8astI4oNHthE+jR9NI/73a0Oxvljqe0PEf4XEHXT0HKhc00l41efJcD5K2gJkBwvzavEocQ7wP/vvq+UUpOTFyq1oHaAXteZ+xEwxMrsZlTYjunIw5XOlj+HMK2Y6FIkym3lQaPm4PkivNW</div>
+<div id="mkdocs-encrypted-content" style="display:none">G7C1LhjFIMRCDZod8HReNw==;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</div>
 <div id="mkdocs-decrypted-content">
     <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
         <h1>This content is protected with AES encryption. </h1>
@@ -594,7 +690,7 @@
 
 <script type="text/javascript">
 var encryptcontent_id = "encryptcontent_1";
-var encryptcontent_path = "l2docs/index.html";
+var encryptcontent_path = "l2docs/TCP-vs-UDP.html";
 var decryption_failure_message = "Invalid password.";
 var encryptcontent_keystore = ["M4NgsTwBg+JCLMN0dk7ieA==;JpjS21ukftqb+TCvma3anjtYMkjAJTH4dCn2wYGgeMzja2AHf8LFNgi+lMAyz0pGfCHEZUuiAwW/XbZFZ0lNMLYXnTuzNHVE4DDmHU7q0kHueIoaAMJQSJupJ+6/7YUD;PONngt6I3lw6qOUPPDcWMQ=="];
 var encryptcontent_obfuscate = 0;
