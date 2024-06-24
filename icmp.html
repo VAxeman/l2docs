@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://xeman.github.io/l2docs/icmp.html">
       
       
+        <link rel="prev" href="TCP-vs-UDP.html">
       
-      <link rel="icon" href="/l2docs/assets/images/favicon.png">
+      
+        <link rel="next" href="internet-models.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>J/L2 Docs</title>
+        <title>ICMP - J/L2 Docs</title>
       
     
     
-      <link rel="stylesheet" href="/l2docs/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="/l2docs/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -85,7 +91,7 @@
       
     
     
-    <script>__md_scope=new URL("/l2docs/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -108,6 +114,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#what-is-the-internet-control-message-protocol-icmp" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +131,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/l2docs/index.html" title="J/L2 Docs" class="md-header__button md-logo" aria-label="J/L2 Docs" data-md-component="logo">
+    <a href="index.html" title="J/L2 Docs" class="md-header__button md-logo" aria-label="J/L2 Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -140,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              ICMP
             
           </span>
         </div>
@@ -217,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/l2docs/index.html" title="J/L2 Docs" class="md-nav__button md-logo" aria-label="J/L2 Docs" data-md-component="logo">
+    <a href="index.html" title="J/L2 Docs" class="md-nav__button md-logo" aria-label="J/L2 Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -235,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/dns.html" class="md-nav__link">
+      <a href="dns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -320,8 +331,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -331,11 +344,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -349,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Networking
@@ -363,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/ports.html" class="md-nav__link">
+      <a href="ports.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -384,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/protocols.html" class="md-nav__link">
+      <a href="protocols.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -405,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/domains.html" class="md-nav__link">
+      <a href="domains.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -426,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/ping-traceroute-netstat.html" class="md-nav__link">
+      <a href="ping-traceroute-netstat.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/ssl.html" class="md-nav__link">
+      <a href="ssl.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -468,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/TCP-vs-UDP.html" class="md-nav__link">
+      <a href="TCP-vs-UDP.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -486,10 +499,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/l2docs/icmp.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ICMP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="icmp.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -498,6 +531,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-icmp-used-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is ICMP used for?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-icmp-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does ICMP work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-icmp-packet" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an ICMP packet?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -510,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/internet-models.html" class="md-nav__link">
+      <a href="internet-models.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/FTP.html" class="md-nav__link">
+      <a href="FTP.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/HTTP-HTTPS.html" class="md-nav__link">
+      <a href="HTTP-HTTPS.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/wordpress.html" class="md-nav__link">
+      <a href="wordpress.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/magento.html" class="md-nav__link">
+      <a href="magento.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/emails.html" class="md-nav__link">
+      <a href="emails.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/bashrc.html" class="md-nav__link">
+      <a href="bashrc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -749,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/faq/what-dns.html" class="md-nav__link">
+      <a href="faq/what-dns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/l2docs/L2 Interview" class="md-nav__link">
+      <a href="L2 Interview" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -808,6 +888,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-icmp-used-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is ICMP used for?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-icmp-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does ICMP work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-icmp-packet" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an ICMP packet?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -819,8 +936,33 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="what-is-the-internet-control-message-protocol-icmp">What is the Internet Control Message Protocol (ICMP)?</h1>
+<p>The Internet Control Message Protocol (ICMP) is a network layer protocol used by network devices to diagnose network communication issues. ICMP is mainly used to determine whether or not data is reaching its intended destination in a timely manner. Commonly, the ICMP protocol is used on network devices, such as routers. ICMP is crucial for error reporting and testing, but it can also be used in distributed denial-of-service (DDoS) attacks.</p>
+<h2 id="what-is-icmp-used-for">What is ICMP used for?</h2>
+<p>The primary purpose of ICMP is for error reporting. When two devices connect over the Internet, the ICMP generates errors to share with the sending device in the event that any of the data did not get to its intended destination. For example, if a packet of data is too large for a router, the router will drop the packet and send an ICMP message back to the original source for the data.</p>
+<p>A secondary use of ICMP protocol is to perform network diagnostics; the commonly used terminal utilities traceroute and ping both operate using ICMP. The traceroute utility is used to display the routing path between two Internet devices. The routing path is the actual physical path of connected routers that a request must pass through before it reaches its destination. The journey between one router and another is known as a ‘hop,’ and a traceroute also reports the time required for each hop along the way. This can be useful for determining sources of network delay.</p>
+<p>The ping utility is a simplified version of traceroute. A ping will test the speed of the connection between two devices and report exactly how long it takes a packet of data to reach its destination and come back to the sender’s device. Although ping does not provide data about routing or hops, it is still a very useful metric for gauging the latency between two devices. The ICMP echo-request and echo-reply messages are commonly used for the purpose of performing a ping.</p>
+<p>Unfortunately network attacks can exploit this process, creating means of disruption such as the ICMP flood attack and the ping of death attack.</p>
+<h2 id="how-does-icmp-work">How does ICMP work?</h2>
+<p>Unlike the Internet Protocol (IP), ICMP is not associated with a transport layer protocol such as TCP or UDP. This makes ICMP a connectionless protocol: one device does not need to open a connection with another device before sending an ICMP message. Normal IP traffic is sent using TCP, which means any two devices that exchange data will first carry out a TCP handshake to ensure both devices are ready to receive data. ICMP does not open a connection in this way. The ICMP protocol also does not allow for targeting a specific port on a device.</p>
+<h2 id="what-is-an-icmp-packet">What is an ICMP packet?</h2>
+<p>An ICMP packet is a packet that uses the ICMP protocol. ICMP packets include an ICMP header after a normal IP header. When a router or server needs to send an error message, the ICMP packet body or data section always contains a copy of the IP header of the packet that caused the error.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -860,10 +1002,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/l2docs/", "features": ["navigation.top", "navigation.tracking", "navigation.sections", "search.suggest"], "search": "/l2docs/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.tracking", "navigation.sections", "search.suggest"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/l2docs/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
