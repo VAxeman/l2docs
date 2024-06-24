@@ -26,17 +26,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://vaxeman.github.io/l2docs/deliverability.html</loc>
+         <lastmod>2024-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://vaxeman.github.io/l2docs/dns.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vaxeman.github.io/l2docs/domains.html</loc>
-         <lastmod>2024-06-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://vaxeman.github.io/l2docs/email-deliverability.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
