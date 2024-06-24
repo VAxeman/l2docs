@@ -11,6 +11,8 @@
         <link rel="canonical" href="https://xeman.github.io/l2docs/faq/what-dns.html">
       
       
+        <link rel="prev" href="../bashrc.html">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>What dns - J/L2 Docs</title>
+        <title>JL2 Interview - J/L2 Docs</title>
       
     
     
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              What dns
+              JL2 Interview
             
           </span>
         </div>
@@ -672,8 +674,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -683,11 +687,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -701,7 +705,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             FAQ
@@ -712,18 +716,204 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../JL2 Interview" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    JL2 Interview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="what-dns.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    None
+    JL2 Interview
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is DNS?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explain-dns-resolution-process-what-happens-when-we-type-in-domaincom-in-the-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explain DNS resolution process - what happens when we type in domain.com in the browser?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-root-nameservers-and-how-many-of-them-are-out-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are root nameservers and how many of them are out there?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-tld-nameservers-what-is-the-difference-between-gtld-and-cctld" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are TLD nameservers? What is the difference between gTLD and ccTLD?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-domain-registrar-what-do-we-define-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a domain registrar? What do we define there?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-authoritative-nameservers-what-would-happen-if-we-created-a-dns-zone-for-googlecom" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are authoritative nameservers? What would happen if we created a DNS zone for google.com?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-bindnamed" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is BIND/named?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explain-the-output-of-dig-trace-domaincom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explain the output of dig +trace domain.com.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS records:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS records:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-do-we-use-cname-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do we use CNAME records?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#are-mx-records-used-for-sending-emails-receiving-emails-or-both-how-do-we-set-up-an-mx-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      Are MX records used for sending emails, receiving emails or both? How do we set up an MX record?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-spf-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the SPF record?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name-all-records-that-are-used-for-mail-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name all records that are used for mail authentication?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-soa-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is SOA record?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-glue-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a GLUE record?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-fqdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is FQDN?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -946,7 +1136,7 @@
                   
 
 
-  <h1>What dns</h1>
+  <h1>JL2 Interview</h1>
 
 <p>!!! note ""  </p>
 <pre><code>You are expected to know all of the DNS records. These are just the ones they most commonly ask about.
