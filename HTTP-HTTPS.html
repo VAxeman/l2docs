@@ -1033,10 +1033,16 @@
 <p>Almost anything you want to do other than viewing static web pages will involve sessions and states. When HTTP is used for its original purpose (sharing static information like scientific papers) the stateless protocol makes a lot of sense. When you start using it for things like web applications, online stores, etc. then statelessness starts to be a bother because these are inherently stateful activities. As a result people very rapidly came up with ways to slather state on top of the stateless protocol. These mechanisms have included things like cookies, like encoding state in the URLs and having the server dynamically fire up data based on those, like hidden state requests</p>
 <h3 id="https-hypertext-transfer-protocol-secure">HTTPS - hypertext transfer protocol secure.</h3>
 <p>The issue with HTTP is that it does not encrypt the packages when a client is communicating with the server. This means that anyone who has an access to that network can read the information that is being transmitted, such as passwords, credit card numbers etc. In order to protect users from man-in-the-middle attacks, we use HTTPS. </p>
-<p>HTTPS uses an TLS/SSL encryption in order to randomize the text being transferred and hide the contents of the communication. This type of security system uses two different keys to encrypt communications between two parties:
-1. The private key - this key is controlled by the owner of a website and it’s kept, as the reader may have speculated, private. This key lives on a web server and is used to decrypt information encrypted by the public key.
-2. The public key - this key is available to everyone who wants to interact with the server in a way that’s secure. Information that’s encrypted by the public key can only be decrypted by the private key.
-HTTPS uses port 443</p>
+<p>HTTPS uses an TLS/SSL encryption in order to randomize the text being transferred and hide the contents of the communication. This type of security system uses two different keys to encrypt communications between two parties:</p>
+<ol>
+<li>
+<p>The private key - this key is controlled by the owner of a website and it’s kept, as the reader may have speculated, private. This key lives on a web server and is used to decrypt information encrypted by the public key.</p>
+</li>
+<li>
+<p>The public key - this key is available to everyone who wants to interact with the server in a way that’s secure. Information that’s encrypted by the public key can only be decrypted by the private key.</p>
+</li>
+</ol>
+<p>HTTPS uses port 443</p>
 <h4 id="http-response-codes">HTTP RESPONSE CODES:</h4>
 <p>All HTTP response status codes are separated into five classes or categories. The first digit of the status code defines the class of response, while the last two digits do not have any classifying or categorization role. There are five classes defined by the standard:</p>
 <ul>
@@ -1046,23 +1052,25 @@ HTTPS uses port 443</p>
 <li><em>4xx client error</em> – the request contains bad syntax or cannot be fulfilled</li>
 <li><em>5xx server error</em> – the server failed to fulfill an apparently valid request</li>
 </ul>
-<p>Common response codes:
-- 200 - Ok
-- 300 - Multiple choices
-- 301 - Moved Permanently
-- 302 - Found
-- 400 - Bad request
-- 401 - Unauthorized
-- 403 - Forbidden
-- 404 - Not Found
-- 408 - Request Timeout
-- 418 - I'm a teapot
-- 429 - Too many requests
-- 444 - No Response
-- 500 - Internal Server Error
-- 502 - Bad Gateway
-- 503 - Service Unavailable
-- 504 - Gateway Timeout</p>
+<p>Common response codes:</p>
+<ul>
+<li>200 - Ok</li>
+<li>300 - Multiple choices</li>
+<li>301 - Moved Permanently</li>
+<li>302 - Found</li>
+<li>400 - Bad request</li>
+<li>401 - Unauthorized</li>
+<li>403 - Forbidden</li>
+<li>404 - Not Found</li>
+<li>408 - Request Timeout</li>
+<li>418 - I'm a teapot</li>
+<li>429 - Too many requests</li>
+<li>444 - No Response</li>
+<li>500 - Internal Server Error</li>
+<li>502 - Bad Gateway</li>
+<li>503 - Service Unavailable</li>
+<li>504 - Gateway Timeout</li>
+</ul>
 
 
 
