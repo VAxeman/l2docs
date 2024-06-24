@@ -1020,9 +1020,9 @@
 <h1 id="spfdkimdmarc-explained">SPF/DKIM/DMARC EXPLAINED:</h1>
 <p>SPF, DKIM, and DMARC: The Three Musketeers of Email Authentication
 In the world of email security, SPF, DKIM, and DMARC are three essential protocols that help prevent spam and phishing attacks by verifying the authenticity of email messages.</p>
-<p>--SPF verifies the authenticity of an email sender's domain
---DKIM verifies the authenticity of an email message using digital signatures
---DMARC provides additional features for email authentication and reporting, and specifies how receivers should handle failed authentication attempts</p>
+<p><strong>SPF</strong> verifies the authenticity of an email sender's domain</p>
+<p><strong>DKIM</strong> verifies the authenticity of an email message using digital signatures</p>
+<p><strong>DMARC</strong> provides additional features for email authentication and reporting, and specifies how receivers should handle failed authentication attempts</p>
 <p>Domain-based Message Authentication, Reporting, and Conformance (DMARC) works with Sender Policy Framework (SPF) and DomainKeys Identified Mail (DKIM) to authenticate mail senders to your recipient mail servers (the personnel you are sending emails to).</p>
 <p>These are three protection mechanisms that help maintain mail purity as it travels to your clients, but is not an automatic/universal measure in many cases across many service providers.</p>
 <p>DMARC ensures the destination email systems trust messages sent from your domain. Using DMARC with SPF and DKIM gives organizations like yours protection against spoofing and phishing emails. DMARC helps mail systems that are receiving your messages decide what to do with those nasty "messages" pretending to be from your domain that fail SPF or DKIM checks.</p>
@@ -1056,22 +1056,24 @@ From address (5322.From): security@yourhappydomain.com</p>
 <p>After all, no one wants to end up in the spam folder - except, perhaps, spammers! We'll leave it to them to fend for themselves."</p>
 <h2 id="example-of-a-proper-dmarc-record">Example of a proper DMARC record:</h2>
 <p>PROPER DMARC
-The current DMARC for domain.com is:
-"v=DMARC1; p=quarantine; rua=mailto:postmaster@domain.com; sp=none; aspf=s; adkim=s; fo=1;"</p>
-<p>p=quarantine: This specifies the policy for emails that fail DMARC authentication. In this case, the policy is to quarantine (i.e., mark as spam) emails that fail authentication.
-rua=mailto:postmaster@domain.com: This specifies the email address to which aggregate reports should be sent. In this case, the reports will be sent to postmaster@domain.com. 
-sp=none: This specifies the policy for subdomains. In this case, the policy is to ignore any subdomains that are not explicitly listed in the DMARC record.
-aspf=s; adkim=s; These specify the alignment methods for SPF and DKIM.
-fo=1: This specifies the forensic OAuth reporting mode. In this case, it is set to 1, which means that forensic reports will be sent to the email address specified in the rua parameter.</p>
+The current DMARC for domain.com is:</p>
+<pre><code>&quot;v=DMARC1; p=quarantine; rua=mailto:postmaster@domain.com; sp=none; aspf=s; adkim=s; fo=1;&quot;
+</code></pre>
+<p><code>p=quarantine</code>: This specifies the policy for emails that fail DMARC authentication. In this case, the policy is to quarantine (i.e., mark as spam) emails that fail authentication.</p>
+<p><code>rua=mailto:postmaster@domain.com</code>: This specifies the email address to which aggregate reports should be sent. In this case, the reports will be sent to postmaster@domain.com.</p>
+<p><code>sp=none</code>: This specifies the policy for subdomains. In this case, the policy is to ignore any subdomains that are not explicitly listed in the DMARC record.</p>
+<p><code>aspf=s; adkim=s;</code> These specify the alignment methods for SPF and DKIM.</p>
+<p><code>fo=1</code>: This specifies the forensic OAuth reporting mode. In this case, it is set to 1, which means that forensic reports will be sent to the email address specified in the rua parameter.</p>
 <h2 id="tldr">TL;DR</h2>
-<p>Emails that fail DMARC authentication should be quarantined, reports should be sent to postmaster@domain.com.
+<p>Emails that fail DMARC authentication should be quarantined, reports should be sent to <code>postmaster@domain.com</code>.
 The policy for subdomains is to ignore any subdomains that are not explicitly listed, and checks are aligned at subdomain level.</p>
-<p>Setting alignment checks at the root level can be more restrictive, but it may also result in the rejection of some legitimate emails that do not meet the specified alignment criteria, potentially causing issues with email delivery.
-IMPORTANT NOTICE!!!!!!!!!
-We don't want to deal with directly configuring DMARC and the potential repercussions of our actions.
+<p>Setting alignment checks at the root level can be more restrictive, but it may also result in the rejection of some legitimate emails that do not meet the specified alignment criteria, potentially causing issues with email delivery.</p>
+<p><strong>IMPORTANT NOTICE!!!!!!!!!</strong></p>
+<p>We don't want to deal with directly configuring DMARC and the potential repercussions of our actions.
 It is typically the responsibility of the client and their developers to review and set up the DMARC policy.</p>
-<p>Our job is to set up the most generic/default DMARC configuration:
-Value: "v=DMARC1; p=none;"</p>
+<p>Our job is to set up the most generic/default DMARC configuration:</p>
+<pre><code>Value: &quot;v=DMARC1; p=none;&quot;
+</code></pre>
 
 
 
