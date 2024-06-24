@@ -8,28 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://vaxeman.github.io/l2docs/icmp.html">
+        <link rel="canonical" href="https://vaxeman.github.io/l2docs/faq/what-networking.html">
       
       
-        <link rel="prev" href="TCP-vs-UDP.html">
       
       
-        <link rel="next" href="internet-models.html">
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>ICMP - J/L2 Docs</title>
+        <title>What networking - J/L2 Docs</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -91,7 +87,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -115,7 +111,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-is-the-internet-control-message-protocol-icmp" class="md-skip">
+        <a href="#what-is-a-private-and-what-is-a-public-ip-address-name-private-ip-ranges" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +127,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="J/L2 Docs" class="md-header__button md-logo" aria-label="J/L2 Docs" data-md-component="logo">
+    <a href="../index.html" title="J/L2 Docs" class="md-header__button md-logo" aria-label="J/L2 Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -151,7 +147,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ICMP
+              What networking
             
           </span>
         </div>
@@ -228,7 +224,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="J/L2 Docs" class="md-nav__button md-logo" aria-label="J/L2 Docs" data-md-component="logo">
+    <a href="../index.html" title="J/L2 Docs" class="md-nav__button md-logo" aria-label="J/L2 Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -246,7 +242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -308,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dns.html" class="md-nav__link">
+      <a href="../dns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,8 +329,6 @@
       
   
   
-    
-  
   
   
     
@@ -346,11 +340,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -364,7 +360,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Networking
@@ -378,7 +374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ports.html" class="md-nav__link">
+      <a href="../ports.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="protocols.html" class="md-nav__link">
+      <a href="../protocols.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="domains.html" class="md-nav__link">
+      <a href="../domains.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -441,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ping-traceroute-netstat.html" class="md-nav__link">
+      <a href="../ping-traceroute-netstat.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ssl.html" class="md-nav__link">
+      <a href="../ssl.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -483,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="TCP-vs-UDP.html" class="md-nav__link">
+      <a href="../TCP-vs-UDP.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,30 +497,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    ICMP
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="icmp.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../icmp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,53 +509,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-icmp-used-for" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is ICMP used for?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-icmp-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      How does ICMP work?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-an-icmp-packet" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is an ICMP packet?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -592,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="internet-models.html" class="md-nav__link">
+      <a href="../internet-models.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -613,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="FTP.html" class="md-nav__link">
+      <a href="../FTP.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="HTTP-HTTPS.html" class="md-nav__link">
+      <a href="../HTTP-HTTPS.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wordpress.html" class="md-nav__link">
+      <a href="../wordpress.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="magento.html" class="md-nav__link">
+      <a href="../magento.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="emails.html" class="md-nav__link">
+      <a href="../emails.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -773,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="bashrc.html" class="md-nav__link">
+      <a href="../bashrc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -835,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="faq/what-dns.html" class="md-nav__link">
+      <a href="what-dns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="L2 Interview" class="md-nav__link">
+      <a href="../L2 Interview" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -894,8 +823,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -904,27 +831,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-icmp-used-for" class="md-nav__link">
+  <a href="#what-is-a-private-and-what-is-a-public-ip-address-name-private-ip-ranges" class="md-nav__link">
     <span class="md-ellipsis">
-      What is ICMP used for?
+      What is a private and what is a public IP address? Name private IP ranges.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-does-icmp-work" class="md-nav__link">
+  <a href="#how-many-bits-are-in-ipv4-how-many-in-ipv6" class="md-nav__link">
     <span class="md-ellipsis">
-      How does ICMP work?
+      How many bits are in IPv4, how many in IPv6?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-an-icmp-packet" class="md-nav__link">
+  <a href="#what-is-dhcpnatcidr-what-is-subnetting" class="md-nav__link">
     <span class="md-ellipsis">
-      What is an ICMP packet?
+      What is DHCP/NAT/CIDR? What is subnetting?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-127001-and-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is 127.0.0.1 and ::1?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-osi-7-layer-model-and-how-does-it-correlate-to-tcpip-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an OSI 7 layer model and how does it correlate to TCP/IP model?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-tcp-and-udp-and-when-are-they-used-what-is-a-three-way-handshake" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are TCP and UDP and when are they used? What is a three way handshake?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-ping-traceroute-utilities-used-for-do-they-use-ports-what-is-icmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are ping &amp; traceroute utilities used for? Do they use ports? What is ICMP?
     </span>
   </a>
   
@@ -945,17 +908,15 @@
                   
 
 
-<h1 id="what-is-the-internet-control-message-protocol-icmp">What is the Internet Control Message Protocol (ICMP)?</h1>
-<p>The Internet Control Message Protocol (ICMP) is a network layer protocol used by network devices to diagnose network communication issues. ICMP is mainly used to determine whether or not data is reaching its intended destination in a timely manner. Commonly, the ICMP protocol is used on network devices, such as routers. ICMP is crucial for error reporting and testing, but it can also be used in distributed denial-of-service (DDoS) attacks.</p>
-<h2 id="what-is-icmp-used-for">What is ICMP used for?</h2>
-<p>The primary purpose of ICMP is for error reporting. When two devices connect over the Internet, the ICMP generates errors to share with the sending device in the event that any of the data did not get to its intended destination. For example, if a packet of data is too large for a router, the router will drop the packet and send an ICMP message back to the original source for the data.</p>
-<p>A secondary use of ICMP protocol is to perform network diagnostics; the commonly used terminal utilities traceroute and ping both operate using ICMP. The traceroute utility is used to display the routing path between two Internet devices. The routing path is the actual physical path of connected routers that a request must pass through before it reaches its destination. The journey between one router and another is known as a ‘hop,’ and a traceroute also reports the time required for each hop along the way. This can be useful for determining sources of network delay.</p>
-<p>The ping utility is a simplified version of traceroute. A ping will test the speed of the connection between two devices and report exactly how long it takes a packet of data to reach its destination and come back to the sender’s device. Although ping does not provide data about routing or hops, it is still a very useful metric for gauging the latency between two devices. The ICMP echo-request and echo-reply messages are commonly used for the purpose of performing a ping.</p>
-<p>Unfortunately network attacks can exploit this process, creating means of disruption such as the ICMP flood attack and the ping of death attack.</p>
-<h2 id="how-does-icmp-work">How does ICMP work?</h2>
-<p>Unlike the Internet Protocol (IP), ICMP is not associated with a transport layer protocol such as TCP or UDP. This makes ICMP a connectionless protocol: one device does not need to open a connection with another device before sending an ICMP message. Normal IP traffic is sent using TCP, which means any two devices that exchange data will first carry out a TCP handshake to ensure both devices are ready to receive data. ICMP does not open a connection in this way. The ICMP protocol also does not allow for targeting a specific port on a device.</p>
-<h2 id="what-is-an-icmp-packet">What is an ICMP packet?</h2>
-<p>An ICMP packet is a packet that uses the ICMP protocol. ICMP packets include an ICMP header after a normal IP header. When a router or server needs to send an error message, the ICMP packet body or data section always contains a copy of the IP header of the packet that caused the error.</p>
+  <h1>What networking</h1>
+
+<h2 id="what-is-a-private-and-what-is-a-public-ip-address-name-private-ip-ranges">What is a private and what is a public IP address? Name private IP ranges.</h2>
+<h2 id="how-many-bits-are-in-ipv4-how-many-in-ipv6">How many bits are in IPv4, how many in IPv6?</h2>
+<h2 id="what-is-dhcpnatcidr-what-is-subnetting">What is DHCP/NAT/CIDR? What is subnetting?</h2>
+<h2 id="what-is-127001-and-1">What is 127.0.0.1 and ::1?</h2>
+<h2 id="what-is-an-osi-7-layer-model-and-how-does-it-correlate-to-tcpip-model">What is an OSI 7 layer model and how does it correlate to TCP/IP model?</h2>
+<h2 id="what-are-tcp-and-udp-and-when-are-they-used-what-is-a-three-way-handshake">What are TCP and UDP and when are they used? What is a three way handshake?</h2>
+<h2 id="what-are-ping-traceroute-utilities-used-for-do-they-use-ports-what-is-icmp">What are ping &amp; traceroute utilities used for? Do they use ports? What is ICMP?</h2>
 
 
 
@@ -987,44 +948,6 @@
         <footer class="md-footer">
   
     
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="TCP-vs-UDP.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: TCP/UDP">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                TCP/UDP
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="internet-models.html" class="md-footer__link md-footer__link--next" aria-label="Next: OSI 7-layer model">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                OSI 7-layer model
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1048,10 +971,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.path", "navigation.footer", "search.suggest"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.path", "navigation.footer", "search.suggest"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

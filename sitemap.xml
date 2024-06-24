@@ -1,92 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://xeman.github.io/l2docs/index.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/index.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/FTP.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/FTP.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/HTTP-HTTPS.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/HTTP-HTTPS.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/TCP-vs-UDP.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/TCP-vs-UDP.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/bashrc.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/bashrc.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/dns.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/dns.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/domains.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/domains.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/emails.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/emails.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/icmp.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/icmp.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/internet-models.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/internet-models.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/magento.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/magento.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/ping-traceroute-netstat.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/ping-traceroute-netstat.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/ports.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/ports.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/protocols.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/protocols.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/ssl.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/ssl.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/wordpress.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/wordpress.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/faq/what-dns.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/faq/what-dns.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xeman.github.io/l2docs/faq/what-emails.html</loc>
+         <loc>https://vaxeman.github.io/l2docs/faq/what-emails.html</loc>
+         <lastmod>2024-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://vaxeman.github.io/l2docs/faq/what-linux.html</loc>
+         <lastmod>2024-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://vaxeman.github.io/l2docs/faq/what-networking.html</loc>
          <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
