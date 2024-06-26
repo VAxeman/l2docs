@@ -1172,11 +1172,11 @@ DMARC (Domain-based Message Authentication and Conformance)
 <pre><code>$ cat /var/log/send/current | tai64nlocal | grep 574692321
 2023-07-26 14:28:27.917076500 info msg 574692321: bytes 16593 from &lt;outlook_553EE1FF76D81E16@outlook.com&gt; qp 5228 uid 108
 
-2023-07-26 14:28:27.920988500 starting delivery 373: msg 574692321 to local myspareparts.com-maurice.niccoli@myspareparts.com
+2023-07-26 14:28:27.920988500 starting delivery 373: msg 574692321 to local domain.com-maurice.niccoli@domain.com
 
 2023-07-26 14:28:27.921004500 status: local 1/10 remote 0/255
 
-2023-07-26 14:28:27.921011500 starting delivery 374: msg 574692321 to local myspareparts.com-ben.veldman@myspareparts.com
+2023-07-26 14:28:27.921011500 starting delivery 374: msg 574692321 to local domain.com-ben.veldman@domain.com
 
 2023-07-26 14:28:27.921023500 status: local 2/10 remote 0/255
 
@@ -1200,10 +1200,10 @@ Lookup command:
 <li><code>qp 5228</code> &lt;- process ID of the qmail-queue process which added the message to the queue. It's used to link the qmail-queue and qmail-send logs together.</li>
 <li><code>uid 108</code> &lt;- numeric UID under which the qmail-queue process was running when the message was added to the queue. </li>
 </ul>
-<p><code>2023-07-26 14:28:27.920988500 starting delivery 373: msg 574692321 to local myspareparts.com-maurice.niccoli@myspareparts.com</code></p>
+<p><code>2023-07-26 14:28:27.920988500 starting delivery 373: msg 574692321 to local domain.com-maurice.niccoli@domain.com</code></p>
 <ul>
 <li><code>starting delivery 373</code> &lt;- Message delivery has been started. </li>
-<li><code>to local myspareparts.com-maurice.niccoli@myspareparts.com</code> &lt;- This message tells you whether this is a local or remote delivery and the recipient's mail address.</li>
+<li><code>to local domain.com-maurice.niccoli@domain.com</code> &lt;- This message tells you whether this is a local or remote delivery and the recipient's mail address.</li>
 </ul>
 <p><code>2023-07-26 14:28:27.921004500 status: local 1/10 remote 0/255</code> </p>
 <ul>
