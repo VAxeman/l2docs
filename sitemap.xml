@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://vaxeman.github.io/l2docs/difference-a-cname-alias.html</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://vaxeman.github.io/l2docs/dns.html</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
@@ -102,6 +107,11 @@
     </url>
     <url>
          <loc>https://vaxeman.github.io/l2docs/faq/what-networking.html</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://vaxeman.github.io/l2docs/networking/IP-address.html</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>

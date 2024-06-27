@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://vaxeman.github.io/l2docs/domains.html">
+        <link rel="canonical" href="https://vaxeman.github.io/l2docs/difference-a-cname-alias.html">
       
       
-        <link rel="prev" href="protocols.html">
+        <link rel="prev" href="dns.html">
       
       
-        <link rel="next" href="ping-traceroute-netstat.html">
+        <link rel="next" href="networking/IP-address.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Domains - J/L2 Docs</title>
+        <title>Differences Among A, CNAME, ALIAS, and URL records - J/L2 Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#domain-name" class="md-skip">
+        <a href="#differences-among-a-cname-alias-and-url-records" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Domains
+              Differences Among A, CNAME, ALIAS, and URL records
             
           </span>
         </div>
@@ -222,19 +222,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -248,7 +248,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             DNS
@@ -280,10 +280,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="difference-a-cname-alias.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Differences Among A, CNAME, ALIAS, and URL records
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="difference-a-cname-alias.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -292,6 +312,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the differences
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-one-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which one to use
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -308,19 +366,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -334,7 +392,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Networking
@@ -408,28 +466,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Domains
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="domains.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="domains.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,48 +478,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#domain-name" class="md-nav__link">
-    <span class="md-ellipsis">
-      Domain name
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Domain name">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fqdn-fully-qualified-domain-name" class="md-nav__link">
-    <span class="md-ellipsis">
-      FQDN - Fully qualified domain name
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -976,6 +974,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -984,26 +984,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#domain-name" class="md-nav__link">
+  <a href="#understanding-the-differences" class="md-nav__link">
     <span class="md-ellipsis">
-      Domain name
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Domain name">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fqdn-fully-qualified-domain-name" class="md-nav__link">
-    <span class="md-ellipsis">
-      FQDN - Fully qualified domain name
+      Understanding the differences
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#which-one-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which one to use
+    </span>
+  </a>
   
 </li>
       
@@ -1022,36 +1016,32 @@
                   
 
 
-  <h1>Domains</h1>
-
-<h2 id="domain-name">Domain name</h2>
-<p>Simply put, a domain name (or just ‘domain’) is the name of a website. It’s what comes after “@” in an email address, or after “www.” in a web address. If someone asks how to find you online, what you tell them is usually your domain name.
-Domain names are typically broken up into two or three parts, each separated by a dot.
-To the left of the <code>TLD</code> is the second-level domain (<code>2LD</code>) and if there is anything to the left of the <code>2LD</code>, it is called the third-level domain (<code>3LD</code>). 
-For Google’s US domain name, ‘google.com’:</p>
+<h1 id="differences-among-a-cname-alias-and-url-records">Differences Among A, CNAME, ALIAS, and URL records</h1>
+<p><code>A</code>, <code>CNAME</code>, <code>ALIAS</code>, and <code>URL</code> records are all possible solutions to point a host name (“name”) to your site. However, they have small differences that affect how the client reaches your site.</p>
+<p><code>A</code> and <code>CNAME</code> records are standard DNS records. <code>ALIAS</code> and <code>URL</code> records are custom DNS records. Both of them are translated internally into <code>A</code> records to ensure compatibility with the DNS protocol.</p>
+<h2 id="understanding-the-differences">Understanding the differences</h2>
+<p>These are the main differences:</p>
 <ul>
-<li>’.com’ is the <code>TLD</code> (most general)</li>
-<li>’google’ is the <code>2LD</code> (most specific)</li>
+<li>The <code>A</code> record maps a name to one or more IP addresses when the IP are known and stable.</li>
+<li>The <code>CNAME</code> record maps a name to another name. It should only be used when there are no other records on that name.</li>
+<li>The <code>ALIAS</code> record maps a name to another name, but can coexist with other records on that name.</li>
+<li>The <code>URL</code> record redirects the name to the target name using the HTTP 301 status code.</li>
 </ul>
-<p>Difference between a domain name and a <code>URL</code>? A uniform resource locator (<code>URL</code>), sometimes called a web address, contains the domain name of a site as well as other information, including the protocol and the path. For example, in the <code>URL</code> ‘https://example.com/learning/’, example.com’ is the domain name, while ‘https’ is the protocol and ‘/learning/’ is the path to a specific page on the website.</p>
-<h3 id="fqdn-fully-qualified-domain-name">FQDN - Fully qualified domain name</h3>
-<p>Check - <a href="https://en.wikipedia.org/wiki/Fully_qualified_domain_name">https://en.wikipedia.org/wiki/Fully_qualified_domain_name</a></p>
-<p>A fully qualified domain name (<code>FQDN</code>) is a part of the uniform resource locator (<code>URL</code>). As the name suggests, it is the full name of an entity in the internet framework, including a host and a computer.</p>
-<p><code>FQDNs</code> are usually used in any interaction on the internet as they are easier to remember than IP addresses. Below are several scenarios of when to use an <code>FQDN</code>:</p>
+<p>Important rules:</p>
 <ul>
-<li>
-<p>Getting an SSL certificate. A secure sockets layer (<code>SSL</code>) protects a connection between a web server and a browser. An <code>SSL</code> certificate is issued to an <code>FQDN</code>, so you may not be able to use <code>SSL</code> services properly without it.</p>
-</li>
-<li>
-<p>Connecting to a remote host. You can make a remote host or a virtual machine by specifying any <code>FQDN</code>, enabling the DNS to look at its DNS table and locate the server. If you use only the hostname to connect to a server, your application may not be able to resolve the hostname.</p>
-</li>
-<li>
-<p>Accessing a specific domain service or protocol. Activities transferring information across a network generally involve the DNS, including pointing to an <code>FQDN</code>. An example is when you connect to a File Transfer Protocol (FTP) or an email server.</p>
-</li>
-<li>
-<p>Migrating to a new server. If you want to migrate your service to a server with a different IP address, using an <code>FQDN</code> instead of an IP address lets you quickly change the DNS record and reduce outages in the IP address changes.</p>
-</li>
+<li>The <code>A</code>, <code>CNAME</code>, and <code>ALIAS</code> records cause a name to resolve to an IP. Conversely, the <code>URL</code> record redirects the name to a destination. The <code>URL</code> record is a simple and effective way to apply a redirect for one name to another name, for example redirecting www.example.com to example.com.</li>
+<li>The <code>A</code> name must resolve to an <code>IP</code>. The <code>CNAME</code> and <code>ALIAS</code> records must point to a name.</li>
 </ul>
+<h2 id="which-one-to-use">Which one to use</h2>
+<p>Understanding the difference between <code>A</code> name and <code>CNAME</code> records will help you decide.</p>
+<p>General rules:</p>
+<ul>
+<li>Use an <code>A</code> record if you manage which IP addresses are assigned to a particular machine, or if the <code>IP</code> are fixed (this is the most common case).</li>
+<li>Use a <code>CNAME</code> record if you want to alias one name to another name, and you don’t need other records (such as <code>MX</code> records for emails) for the same name.</li>
+<li>Use an <code>ALIAS</code> record if you’re trying to alias the root domain (apex zone), or if you need other records for the same name.</li>
+<li>Use the <code>URL</code> record if you want the name to redirect (change address) instead of resolving to a destination.</li>
+</ul>
+<p><strong>You should never use a CNAME record for your root domain name (e.g. example.com).</strong></p>
 
 
 
@@ -1087,7 +1077,7 @@ For Google’s US domain name, ‘google.com’:</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="protocols.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Protocols">
+          <a href="dns.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Common records &amp; lookup">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1097,20 +1087,20 @@ For Google’s US domain name, ‘google.com’:</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Protocols
+                Common records & lookup
               </div>
             </div>
           </a>
         
         
           
-          <a href="ping-traceroute-netstat.html" class="md-footer__link md-footer__link--next" aria-label="Next: Basic Tools">
+          <a href="networking/IP-address.html" class="md-footer__link md-footer__link--next" aria-label="Next: IP address">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Basic Tools
+                IP address
               </div>
             </div>
             <div class="md-footer__button md-icon">
