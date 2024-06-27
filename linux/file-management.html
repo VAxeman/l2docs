@@ -771,9 +771,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#glob-uzorci" class="md-nav__link">
+  <a href="#glob-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Glob uzorci
+      Glob patterns
     </span>
   </a>
   
@@ -1232,9 +1232,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#glob-uzorci" class="md-nav__link">
+  <a href="#glob-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Glob uzorci
+      Glob patterns
     </span>
   </a>
   
@@ -1325,11 +1325,11 @@ Understanding these fundamentals enables efficient navigation and management of 
 </ul>
 </li>
 </ul>
-<h2 id="glob-uzorci">Glob uzorci</h2>
+<h2 id="glob-patterns">Glob patterns</h2>
+<p>File globbing is pattern-matching mechanism used for filename expansion in the shell. The term "glob" represents the concept of matching patterns globally or expansively across multiple filenames or paths. It allows users to specify wildcard patterns to match files or directories based on certain criteria.</p>
 <ul>
-<li>mnogo radimo sa nazivima datoteka pa postoji mogućnost rada sa posebnim znakovima (koji nemaju doslovno značenje) da bismo brzo i lako specificirali nazive većeg broja datoteka</li>
 <li>
-<p><a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob uzorci</a>, globovi ili wildcards</p>
+<p><a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob patterns</a>, globs ili wildcards</p>
 <ul>
 <li>koriste se za pretraživanje uzoraka koji odgovaraju zadanome</li>
 <li>način da više datoteka koje imaju slična imena povežemo jednom naredbom</li>
@@ -1337,15 +1337,12 @@ Understanding these fundamentals enables efficient navigation and management of 
 </ul>
 </li>
 <li>
-<p><code>?</code> -- jedan znak, bilo koji</p>
+<p><code>?</code> -- is used to match exactly one character, any will do</p>
 </li>
-<li><code>*</code> -- bilo koliko bilo kojih znakova</li>
-<li><code>[chars]</code> -- jedan znak, bilo koji od navedenih u zagradama, može i raspon oblika <code>[A-Z]</code>, <code>[a-z]</code> ili <code>[0-9]</code></li>
+<li><code>*</code> -- is used to match any number of characters (zero or more)</li>
+<li><code>[chars]</code> -- can be used to match exact characters or you can also specify a range within [] <code>[A-Z]</code>, <code>[a-z]</code> ili <code>[0-9]</code></li>
 <li>
-<p><code>[:klasa:]</code> -- zamjenjuje samo jedan, bilo koji znak koji je član navedene klase</p>
-<ul>
-<li>najčešće korištene klase su: <code>[:alnum:]</code>, <code>[:alpha:]</code>, <code>[:digit:]</code>, <code>[:lower:]</code>, <code>[:upper:]</code></li>
-</ul>
+<p><code>!</code> -- is used to exclude characters from the list that is specified within the square brackets</p>
 </li>
 <li>
 <p><code>\</code> -- tzv. <em>prekidni znak</em></p>
