@@ -1189,8 +1189,8 @@ This is the address displayed as the From address by your mail application. The 
 <p><a href="https://datatracker.ietf.org/doc/html/rfc5321">https://datatracker.ietf.org/doc/html/rfc5321</a>
 <a href="https://datatracker.ietf.org/doc/html/rfc5322">https://datatracker.ietf.org/doc/html/rfc5322</a></p>
 <p>Let me give you an example, and in this one the sender addresses are as follows:</p>
-<p>Mail from address (5321.MailFrom): badguy@phishing.nastyplace.com
-From address (5322.From): security@yourhappydomain.com</p>
+<p>Mail from address (5321.MailFrom): badguy@phishing.nastyplace.com</p>
+<p>From address (5322.From): security@yourhappydomain.com</p>
 <p>If <abbr title="Sender Policy Framework">SPF</abbr> is configured, then the receiving server does a check against the Mail from address badguy@phishing.nastyplace.com. If the message came from a valid source for the domain phishing.nastyplace.com, then the <abbr title="Sender Policy Framework">SPF</abbr> check passes. By "valid source", that means that the originating server exists, not that it's actually yours. See the problem already in progress? Since the email client only displays the From address, the user sees this message came from security@yourhappydomain.com. With <abbr title="Sender Policy Framework">SPF</abbr> alone, the validity of yourhappydomain.com was never authenticated.</p>
 <p>When we use <abbr title="Domain-based Message Authentication, Reporting, and Conformance">DMARC</abbr>, the receiving server will additionally perform a check against the From address. In the example above, if there's a <abbr title="Domain-based Message Authentication, Reporting, and Conformance">DMARC</abbr> TXT record in place for yourhappydomain.com, then the check against the From address fails because the "Mail from" is a mismatch against the legitimate domain.</p>
 <p>That deceptive email is bounced or quarantined, and the crisis you never knew you had is diverted.</p>
