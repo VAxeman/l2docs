@@ -111,6 +111,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://vaxeman.github.io/l2docs/linux/archiving-compression.html</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://vaxeman.github.io/l2docs/linux/file-management.html</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://vaxeman.github.io/l2docs/linux/permissions.html</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://vaxeman.github.io/l2docs/linux/piping.html</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://vaxeman.github.io/l2docs/networking/IP-address.html</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>

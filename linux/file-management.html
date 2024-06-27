@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://vaxeman.github.io/l2docs/networking/IP-address.html">
+        <link rel="canonical" href="https://vaxeman.github.io/l2docs/linux/file-management.html">
       
       
-        <link rel="prev" href="../difference-a-cname-alias.html">
-      
-      
-        <link rel="next" href="../ports.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>IP address - J/L2 Docs</title>
+        <title>File management - J/L2 Docs</title>
       
     
     
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ip-address" class="md-skip">
+        <a href="#file-management" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IP address
+              File management
             
           </span>
         </div>
@@ -308,19 +304,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -334,7 +330,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Networking
@@ -345,28 +341,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    IP address
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="IP-address.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../networking/IP-address.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -375,69 +353,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ip-address" class="md-nav__link">
-    <span class="md-ellipsis">
-      IP address
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-prefixes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network prefixes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ip-address-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      IP address types
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ip-classes-classful-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      IP Classes - Classful network
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cidr" class="md-nav__link">
-    <span class="md-ellipsis">
-      CIDR
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -704,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux/permissions.html" class="md-nav__link">
+      <a href="permissions.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1125,6 +1040,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1133,45 +1050,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ip-address" class="md-nav__link">
+  <a href="#creating-copying-deleting-and-renaming" class="md-nav__link">
     <span class="md-ellipsis">
-      IP address
+      Creating, copying, deleting and renaming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating, copying, deleting and renaming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#renaming-files-with-mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renaming Files with ‘mv’
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-files-with-mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving Files with ‘mv’
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glob-uzorci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glob uzorci
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#network-prefixes" class="md-nav__link">
+  <a href="#pretrazivanje-datotecnog-sustava" class="md-nav__link">
     <span class="md-ellipsis">
-      Network prefixes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ip-address-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      IP address types
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ip-classes-classful-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      IP Classes - Classful network
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cidr" class="md-nav__link">
-    <span class="md-ellipsis">
-      CIDR
+      Pretraživanje datotečnog sustava
     </span>
   </a>
   
@@ -1192,49 +1115,242 @@
                   
 
 
-  <h1>IP address</h1>
+<h1 id="file-management">File management</h1>
+<p>Linux file management involves organizing, accessing, and manipulating files and directories within the Linux operating system. 
+Users interact with files using commands like <code>ls</code> (list), <code>cp</code> (copy), <code>mv</code> (move), and <code>rm</code> (remove). 
+Directories, or folders, provide a hierarchical structure for organizing files. Permissions control access to files, determining who can <code>read</code>, <code>write</code>, or <code>execute</code> them.
+Key concepts include file <code>ownership</code>, represented by <code>users</code> and <code>groups</code>, and <code>symbolic links</code>, which are pointers to other files or directories.
+Understanding these fundamentals enables efficient navigation and management of files in the Linux environment.</p>
+<h2 id="creating-copying-deleting-and-renaming">Creating, copying, deleting and renaming</h2>
+<ul>
+<li><code>touch</code> create a new, empty file</li>
+<li><code>rm</code> permanently remove file/directory</li>
+<li>
+<p><code>cp</code> copying files/directories from one location to another; <strong>example:</strong></p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cp<span class="w"> </span><span class="o">[</span>...file/directory-sources<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span>
+</code></pre></div>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>[file/directory-sources] specifies the sources of the files or directories you want to copy. And the [destination] argument specifies the location you want to copy the file to.</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li>
+<p><code>mv</code> versatile tool used for moving or renaming files/directories; <strong>example:</strong></p>
+<h3 id="renaming-files-with-mv">Renaming Files with ‘mv’</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mv<span class="w"> </span>helloworld.txt<span class="w"> </span>hellolinux.txt
 
-<h2 id="ip-address">IP address</h2>
-<p>An IP address is a unique numerical value assigned to a device or domain that connects to the Internet. Each IP address is a series of characters, such as '192.168.1.1'. Via DNS resolvers, which translate human-readable domain names into IP addresses, users are able to access websites without memorizing this complex series of characters.</p>
-<p>Two main functions:</p>
+<span class="c1"># Output:</span>
+<span class="c1"># The file previously named &#39;helloworld.txt&#39; is now named &#39;hellolinux.txt&#39;</span>
+</code></pre></div>
+<h3 id="moving-files-with-mv">Moving Files with ‘mv’</h3>
+<p><div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/home/user/Documents/old_folder/file.txt<span class="w"> </span>/home/user/Documents/new_folder/
+
+<span class="c1"># Output:</span>
+<span class="c1"># &#39;file.txt&#39; is moved from &#39;old_folder&#39; to &#39;new_folder&#39;</span>
+</code></pre></div>
+- <code>cp -r</code> i <code>rm -r</code> označava rekurzivno kopiranje i brisanje, briše direktorij i sve datoteke i poddirektorije u njemu</p>
 <ul>
-<li>Host or network interface identification </li>
-<li>Location addressing</li>
+<li>kod naredbe <code>mv</code>, za razliku od <code>cp</code> i <code>rm</code>, nema potrebe za rekurzijom; radi se o preimenovanju</li>
 </ul>
-<p>IPv4 / IPv6 - IPv4 is a 32-bit IP protocol address construction, IPv6 is 128-bit one</p>
-<h2 id="network-prefixes">Network prefixes</h2>
-<p>IP addresses can be taken from the IPv4 or the IPv6 pool and are divided into two parts, a network section and a host section. The network section identifies the particular network and the host section identifies the particular node (for example, a certain computer) on the Local Area Network (LAN).</p>
-<h2 id="ip-address-types">IP address types</h2>
-<p>There are four different types of IP addresses: <strong>public</strong>, <strong>private</strong>, <strong>static</strong>, and <strong>dynamic</strong>. While the public and private are indicative of the location of the network—private being used inside 
-a network while the public is used outside of a network—static and dynamic indicate permanency.</p>
+</li>
+</ul>
+<div class="admonition admonition">
+<p class="admonition-title">Zadatak</p>
 <ul>
 <li>
-<p><strong>Public</strong>: public IP address is an address where one primary address is associated with your whole network. In this type of IP address, each of the connected devices has the same IP address</p>
+<p>U Vašem kućnom direktoriju napravite predloženu strukturu direktorija:</p>
+<div class="highlight"><pre><span></span><code>studentXY ------ Studij --------- Preddiplomski -------- DINP.txt
+                           |                        |
+                           |----- Pravilnik.txt     |--- Raspored.txt
+</code></pre></div>
 </li>
 <li>
-<p><strong>Private</strong>: private IP address is a unique IP number assigned to every device that connects to your home internet network, which includes devices like computers, tablets, smartphones, which is used in your household</p>
+<p>Kopirajte datoteku <code>Pravilnik.txt</code> u direktorij <code>Preddiplomski</code>.</p>
 </li>
-<li>
-<p><strong>Static</strong>: static IP address is an IP address that cannot be changed. In contrast, a dynamic IP address will be assigned by a Dynamic Host Configuration Protocol (DHCP) server, which is subject to change. Static IP address never changes, but it can be altered as part of routine network administration.</p>
-</li>
-<li><strong>Dynamic</strong>: dynamic IP addresses always keep changing. It is temporary and is allocated to a device every time it connects to the web.</li>
+<li>Kopirajte sav sadržaj direktorija <code>Preddiplomski</code>, u direktorij <code>Diplomski</code>, koristeći apsolutno referenciranje.</li>
+<li>Izbrišite direktorij <code>Preddiplomski</code>.</li>
+<li>Direktorij <code>Diplomski</code> preimenujte u <code>Dipl</code>.</li>
 </ul>
-<h2 id="ip-classes-classful-network">IP Classes - Classful network</h2>
-<p>A classful network is an obsolete network addressing architecture used in the Internet from 1981 until the introduction of Classless Inter-Domain Routing in 1993. </p>
-<p>The method divides the IP address space for Internet Protocol version 4 into five address classes based on the leading four address bits.
-IP addresses from the first three classes (A, B and C) can be used for host addresses.</p>
+</div>
+<div class="admonition admonition">
+<p class="admonition-title">Dodatni zadatak</p>
+<p>Provjerite čemu služi i kako se koristi program <a href="https://en.wikipedia.org/wiki/Midnight_Commander">Midnight Commander</a> (naredba <code>mc</code>).</p>
+</div>
+<h2 id="glob-uzorci">Glob uzorci</h2>
 <ul>
-<li><strong>Class A</strong>: 10.0. 0.0 — 10.255. 255.255.</li>
-<li><strong>Class B</strong>: 172.16. 0.0 — 172.31. 255.255.</li>
-<li><strong>Class C</strong>: 192.168. 0.0 — 192.168. 255.255.</li>
+<li>mnogo radimo sa nazivima datoteka pa postoji mogućnost rada sa posebnim znakovima (koji nemaju doslovno značenje) da bismo brzo i lako specificirali nazive većeg broja datoteka</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob uzorci</a>, globovi ili wildcards</p>
+<ul>
+<li>koriste se za pretraživanje uzoraka koji odgovaraju zadanome</li>
+<li>način da više datoteka koje imaju slična imena povežemo jednom naredbom</li>
+<li>glob != regex, samo ima donekle sličnu sintaksu i namjenu</li>
 </ul>
-<h2 id="cidr">CIDR</h2>
-<p>Classless Inter-domain Routing (CIDR) was introduced in order to improve both address space utilization and routing scalability in the Internet. It was needed because of the rapid growth of the Internet and growth of the IP routing tables held in the Internet routers.</p>
-<p>CIDR moves away from the traditional IP classes (Class A, Class B, Class C, and so on). In CIDR , an IP network is represented by a prefix, which is an IP address and some indication of the length of the mask. Length means the number of left-most contiguous mask bits that are set to one.</p>
-<p>So, network 172.16.0.0 255.255.0.0 can be represented as 172.16.0.0/16. CIDR also depicts a more hierarchical Internet architecture, where each domain takes its IP addresses from a higher level.</p>
-<p>This allows for the summarization of the domains to be done at the higher level. For example, if an ISP owns a network 172.16.0.0/16, then the ISP can offer 172.16.1.0/24, 172.16.2.0/24, and so on to customers.</p>
-<p>Yet, when advertising to other providers, the ISP only needs to advertise 172.16.0.0/16.
-CIDR RANGE VISUALIZER - <a href="https://cidr.xyz">https://cidr.xyz</a></p>
+</li>
+<li>
+<p><code>?</code> -- jedan znak, bilo koji</p>
+</li>
+<li><code>*</code> -- bilo koliko bilo kojih znakova</li>
+<li><code>[chars]</code> -- jedan znak, bilo koji od navedenih u zagradama, može i raspon oblika <code>[A-Z]</code>, <code>[a-z]</code> ili <code>[0-9]</code></li>
+<li>
+<p><code>[:klasa:]</code> -- zamjenjuje samo jedan, bilo koji znak koji je član navedene klase</p>
+<ul>
+<li>najčešće korištene klase su: <code>[:alnum:]</code>, <code>[:alpha:]</code>, <code>[:digit:]</code>, <code>[:lower:]</code>, <code>[:upper:]</code></li>
+</ul>
+</li>
+<li>
+<p><code>\</code> -- tzv. <em>prekidni znak</em></p>
+</li>
+</ul>
+<div class="admonition admonition">
+<p class="admonition-title">Zadatak</p>
+<ul>
+<li>U svom kućnom direktoriju stvorite poddirektorij <code>Zadatci</code> i u njemu datoteke <code>zadatak</code>, <code>zadatek</code>, <code>zadatuk</code>, <code>zadatak1</code>, <code>zadatak2</code>, <code>zadatakABC</code>, <code>zadatakabc</code>, <code>zadacnica</code>, <code>zadacnicA</code>, <code>zad3</code> i <code>dat05</code>.</li>
+<li>
+<p>Jednom naredbom, koristeći se glob-om, izlistajte samo:</p>
+<ul>
+<li><code>zadatak</code>, <code>zadatek</code> i <code>zadatuk</code></li>
+<li><code>zadatek</code> i <code>zadatuk</code></li>
+<li>samo datoteke koje na 8 mjestu naziva imaju veliko slovo</li>
+<li>samo datoteke koje počinju slovom <code>z</code>, na 5 mjestu naziva im nije ni malo ni veliko slovo koja se po abecedi nalazi nakon slova <code>s</code>, i čiji naziv završava malim slovom</li>
+<li>sve datoteke čiji naziv završava brojem manjim od 4</li>
+<li>sve navedene datoteke</li>
+</ul>
+</li>
+<li>
+<p>Isprobajte naredbu <code>ls [^ad]*</code> i razmislite o njezinom značenju.</p>
+</li>
+<li>Isprobajte naredbu <code>ls {ab,dat,f}??</code> i razmislite o njezinom značenju.</li>
+<li>Isprobajte naredbu <code>cat *[[:upper:]1-4]</code>. Što ona radi?</li>
+</ul>
+</div>
+<h2 id="pretrazivanje-datotecnog-sustava">Pretraživanje datotečnog sustava</h2>
+<ul>
+<li>
+<p><code>find</code> u specificiranim direktorijima traži datoteke ili skupine datoteka</p>
+<ul>
+<li>sintaksa: <code>find &lt;direktoriji&gt; &lt;uvjeti&gt;</code> (direktorij koji se pretražuje <em>mora</em> biti naveden prije uvjeta)</li>
+<li>direktorij može biti dan korištenjem apsolutnog ili relativnog referenciranja</li>
+<li>može koristiti regularne izraze parametar <code>-regex</code></li>
+<li>
+<p>pregled često korištenih parametara:</p>
+<table>
+<thead>
+<tr>
+<th>Parametar</th>
+<th>Ograničenje pretraživanja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-user &lt;ime korisnika&gt;</code></td>
+<td>Samo datoteke određenog korisnika</td>
+</tr>
+<tr>
+<td><code>-size &lt;veličina&gt;</code></td>
+<td>Samo datoteke specifične veličine</td>
+</tr>
+<tr>
+<td><code>-type f</code></td>
+<td>Samo datoteke (ne direktoriji)</td>
+</tr>
+<tr>
+<td><code>-type d</code></td>
+<td>Samo direktoriji</td>
+</tr>
+<tr>
+<td><code>-name &lt;ime datoteke&gt;</code></td>
+<td>Samo datoteke određenog imena</td>
+</tr>
+<tr>
+<td><code>-atime &lt;broj dana&gt;</code></td>
+<td>Samo datoteke čije je vrijeme posljednjeg pristupa manje od navedenog u danima</td>
+</tr>
+<tr>
+<td><code>-amin &lt;broj minuta&gt;</code></td>
+<td>Isto kao iznad samo se navode minute umjesto dana</td>
+</tr>
+<tr>
+<td><code>-ctime &lt;broj dana&gt;</code></td>
+<td>Samo datoteke čije je vrijeme izrade manje od navedenog u danima</td>
+</tr>
+<tr>
+<td><code>-cmin &lt;broj minuta&gt;</code></td>
+<td>Isto kao iznad samo se navode minute umjesto dana</td>
+</tr>
+<tr>
+<td><code>-mtime &lt;broj dana&gt;</code></td>
+<td>Samo datoteke čije je vrijeme posljednje promjene manje od navedenog u danima</td>
+</tr>
+<tr>
+<td><code>-mmin &lt;broj minuta&gt;</code></td>
+<td>Isto kao iznad samo se navode minute umjesto dana</td>
+</tr>
+<tr>
+<td><code>-newer &lt;datoteka&gt;</code></td>
+<td>Samo datoteke stvorene prije određene datoteke</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>naredba je spora jer mora provjeriti svaki file koji se nalazi na zadanoj putanji</p>
+</li>
+<li>
+<p>česte primjene:</p>
+<ul>
+<li>brisanje nađenih datoteka naredbom find: <code>find ... -exec rm {} \;</code> ili <code>find ... | xargs rm</code></li>
+<li>pretraživanje nađenih datoteka: <code>find ... -type f | xargs grep &lt;izraz&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>locate</code> pretražuje bazu datoteka za datoteku koja u imenu sadrži dani niz znakova</p>
+<ul>
+<li>sintaksa: <code>locate &lt;ime datoteke&gt;</code></li>
+<li>rezultat pretraživanja je puna putanja do tražene datoteke</li>
+<li>pretražuje brže jer stvara bazu imena datoteka koje postoje u datotećnom sustavu te nema potrebe pretraživati svaku datoteku koja postoji na datotečnom sustavu; baza se osvježava naredbom <code>updatedb</code>, na većini modernih distribucija se pokreće automatski na dnevnoj bazi</li>
+</ul>
+</li>
+<li>
+<p><code>which</code> se koristi kada želimo saznati punu putanju do određene izvršne datoteke datoteke koja se nalazi u nekom od direktorija navedenom u varijabli okoline <code>PATH</code></p>
+</li>
+<li>
+<p><code>whereis</code> pretražuje lokaciju izvornog koda, binarnih datoteka i stranica priručnika</p>
+<ul>
+<li>
+<p>pregled često korištenih parametara:</p>
+<table>
+<thead>
+<tr>
+<th>Parametar</th>
+<th>Uloga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-b</code></td>
+<td>traženje binarnih datoteka</td>
+</tr>
+<tr>
+<td><code>-m</code></td>
+<td>traženje stranica priručnika</td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>traženje izvršnog koda</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -1265,44 +1381,6 @@ CIDR RANGE VISUALIZER - <a href="https://cidr.xyz">https://cidr.xyz</a></p>
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../difference-a-cname-alias.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Differences Among A, CNAME, ALIAS, and URL records">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Differences Among A, CNAME, ALIAS, and URL records
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../ports.html" class="md-footer__link md-footer__link--next" aria-label="Next: Ports">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Ports
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
