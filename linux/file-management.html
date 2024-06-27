@@ -738,8 +738,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#moving-and-renaming-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving and Renaming Directories
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-wildcards-with-mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Wildcards with ‘mv’
+    </span>
+  </a>
   
 </li>
       
@@ -1172,8 +1190,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#moving-and-renaming-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving and Renaming Directories
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-wildcards-with-mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Wildcards with ‘mv’
+    </span>
+  </a>
   
 </li>
       
@@ -1236,12 +1272,35 @@ Understanding these fundamentals enables efficient navigation and management of 
 <span class="c1"># The file previously named &#39;helloworld.txt&#39; is now named &#39;hellolinux.txt&#39;</span>
 </code></pre></div>
 <h3 id="moving-files-with-mv">Moving Files with ‘mv’</h3>
-<p><div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/home/user/Documents/old_folder/file.txt<span class="w"> </span>/home/user/Documents/new_folder/
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/home/user/Documents/old_folder/file.txt<span class="w"> </span>/home/user/Documents/new_folder/
 
 <span class="c1"># Output:</span>
 <span class="c1"># &#39;file.txt&#39; is moved from &#39;old_folder&#39; to &#39;new_folder&#39;</span>
 </code></pre></div>
-- <code>cp -r</code> i <code>rm -r</code> označava rekurzivno kopiranje i brisanje, briše direktorij i sve datoteke i poddirektorije u njemu</p>
+<h3 id="moving-and-renaming-directories">Moving and Renaming Directories</h3>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>old_directory/<span class="w"> </span>new_directory/
+
+<span class="c1"># Output:</span>
+<span class="c1"># The directory &#39;old_directory&#39; is now renamed to &#39;new_directory&#39;</span>
+</code></pre></div>
+<h2 id="using-wildcards-with-mv">Using Wildcards with ‘mv’</h2>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>*.txt<span class="w"> </span>text_files/
+
+<span class="c1"># Output:</span>
+<span class="c1"># All .txt files are moved to the &#39;text_files&#39; directory</span>
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Overwriting Files</p>
+<p>A potential pitfall with the ‘mv’ command is that it overwrites files without any warning. If a file with the destination name already exists, the ‘mv’ command will overwrite it.</p>
+</div>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># Output:</span>
+<span class="c1"># &#39;file1.txt&#39; is renamed to &#39;file2.txt&#39;, overwriting the existing &#39;file2.txt&#39;</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>cp -r</code> i <code>rm -r</code> označava rekurzivno kopiranje i brisanje, briše direktorij i sve datoteke i poddirektorije u njemu</p>
 <ul>
 <li>kod naredbe <code>mv</code>, za razliku od <code>cp</code> i <code>rm</code>, nema potrebe za rekurzijom; radi se o preimenovanju</li>
 </ul>
