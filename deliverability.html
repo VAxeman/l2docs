@@ -227,13 +227,8 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -242,7 +237,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -297,13 +292,8 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -312,7 +302,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -556,13 +546,8 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -571,7 +556,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -649,20 +634,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -825,13 +805,8 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -840,7 +815,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1056,9 +1031,9 @@ From address (5322.From): security@yourhappydomain.com</p>
 <p>After all, no one wants to end up in the spam folder - except, perhaps, spammers! We'll leave it to them to fend for themselves."</p>
 <h2 id="example-of-a-proper-dmarc-record">Example of a proper DMARC record:</h2>
 <p>PROPER DMARC
-The current DMARC for domain.com is:</p>
-<pre><code>&quot;v=DMARC1; p=quarantine; rua=mailto:postmaster@domain.com; sp=none; aspf=s; adkim=s; fo=1;&quot;
-</code></pre>
+The current DMARC for domain.com is:
+<div class="highlight"><pre><span></span><code>&quot;v=DMARC1; p=quarantine; rua=mailto:postmaster@domain.com; sp=none; aspf=s; adkim=s; fo=1;&quot;
+</code></pre></div></p>
 <p><code>p=quarantine</code>: This specifies the policy for emails that fail DMARC authentication. In this case, the policy is to quarantine (i.e., mark as spam) emails that fail authentication.</p>
 <p><code>rua=mailto:postmaster@domain.com</code>: This specifies the email address to which aggregate reports should be sent. In this case, the reports will be sent to postmaster@domain.com.</p>
 <p><code>sp=none</code>: This specifies the policy for subdomains. In this case, the policy is to ignore any subdomains that are not explicitly listed in the DMARC record.</p>
@@ -1072,8 +1047,8 @@ The policy for subdomains is to ignore any subdomains that are not explicitly li
 <p>We don't want to deal with directly configuring DMARC and the potential repercussions of our actions.
 It is typically the responsibility of the client and their developers to review and set up the DMARC policy.</p>
 <p>Our job is to set up the most generic/default DMARC configuration:</p>
-<pre><code>Value: &quot;v=DMARC1; p=none;&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code>Value: &quot;v=DMARC1; p=none;&quot;
+</code></pre></div>
 
 
 
@@ -1166,7 +1141,7 @@ It is typically the responsibility of the client and their developers to review 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.path", "navigation.footer", "search.suggest"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.top", "navigation.path", "navigation.tracking    -", "navigation.expand", "navigation.path", "navigation.footer", "toc.follow", "search.suggest", "content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.ad660dcc.min.js"></script>
