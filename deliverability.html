@@ -1213,10 +1213,11 @@ The current <abbr title="Domain-based Message Authentication, Reporting, and Con
 <p>Emails that fail <abbr title="Domain-based Message Authentication, Reporting, and Conformance">DMARC</abbr> authentication should be quarantined, reports should be sent to <code>postmaster@domain.com</code>.
 The policy for subdomains is to ignore any subdomains that are not explicitly listed, and checks are aligned at subdomain level.</p>
 <p>Setting alignment checks at the root level can be more restrictive, but it may also result in the rejection of some legitimate emails that do not meet the specified alignment criteria, potentially causing issues with email delivery.</p>
-<p>!!! warning '<strong>IMPORTANT NOTICE!</strong>'</p>
-<div class="highlight"><pre><span></span><code>We don&#39;t want to deal with directly configuring DMARC and the potential repercussions of our actions.
-It is typically the responsibility of the client and their developers to review and set up the DMARC policy.
-</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We don't want to deal with directly configuring <abbr title="Domain-based Message Authentication, Reporting, and Conformance">DMARC</abbr> and the potential repercussions of our actions.
+It is typically the responsibility of the client and their developers to review and set up the <abbr title="Domain-based Message Authentication, Reporting, and Conformance">DMARC</abbr> policy.</p>
+</div>
 <p>Our job is to set up the most generic/default <abbr title="Domain-based Message Authentication, Reporting, and Conformance">DMARC</abbr> configuration:</p>
 <div class="highlight"><pre><span></span><code>Value: &quot;v=DMARC1; p=none;&quot;
 </code></pre></div>
