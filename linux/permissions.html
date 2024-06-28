@@ -1140,20 +1140,18 @@
 <p>R = 4
 W = 2
 X = 1</p>
-<ul>
-<li>rwx--x--x  1 root root   181 Aug  5  2023  cats.jpg
-<div class="highlight"><pre><span></span><code> ---------  - ---- ----   --- ------------  --------
-|    |       |   |   |      |        |           |
-|    |       |   |   |      |        |           +----- file name
-|    |       |   |   |      |        +----- modification time
-|    |       |   |   |      +----- file size in bytes
-|    |       |   |   +----- group owner
-|    |       |   +----- user owner
-|    |       +----- hard link count
-|    +----- permissions
-+---- file type
-</code></pre></div></li>
-</ul>
+<div class="highlight"><pre><span></span><code>rwx--x--x<span class="w">  </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">   </span><span class="m">181</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">5</span><span class="w">  </span><span class="m">2023</span><span class="w">  </span>cats.jpg
+---------<span class="w">  </span>-<span class="w"> </span>----<span class="w"> </span>----<span class="w">   </span>---<span class="w"> </span>------------<span class="w">  </span>--------
+<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">        </span><span class="p">|</span><span class="w">           </span><span class="p">|</span>
+<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">        </span><span class="p">|</span><span class="w">           </span>+-----<span class="w"> </span>file<span class="w"> </span>name
+<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">        </span>+-----<span class="w"> </span>modification<span class="w"> </span><span class="nb">time</span>
+<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">      </span>+-----<span class="w"> </span>file<span class="w"> </span>size<span class="w"> </span><span class="k">in</span><span class="w"> </span>bytes
+<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>+-----<span class="w"> </span>group<span class="w"> </span>owner
+<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span>+-----<span class="w"> </span>user<span class="w"> </span>owner
+<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span>+-----<span class="w"> </span>hard<span class="w"> </span>link<span class="w"> </span>count
+<span class="p">|</span><span class="w">    </span>+-----<span class="w"> </span>permissions
++----<span class="w"> </span>file<span class="w"> </span><span class="nb">type</span>
+</code></pre></div>
 <h2 id="absolutenumeric-mode-in-linux">Absolute(Numeric) Mode in Linux</h2>
 <p>In this mode, file permissions are not represented as characters but a three-digit octal number.</p>
 <table>
