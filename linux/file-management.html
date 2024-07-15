@@ -1264,213 +1264,33 @@
                   
 
 
-<h1 id="file-management">File management</h1>
-<p>Linux file management involves organizing, accessing, and manipulating files and directories within the Linux operating system. 
-Users interact with files using commands like <code>ls</code> (list), <code>cp</code> (copy), <code>mv</code> (move), and <code>rm</code> (remove). 
-Directories, or folders, provide a hierarchical structure for organizing files. Permissions control access to files, determining who can <code>read</code>, <code>write</code>, or <code>execute</code> them.
-Key concepts include file <code>ownership</code>, represented by <code>users</code> and <code>groups</code>, and <code>symbolic links</code>, which are pointers to other files or directories.
-Understanding these fundamentals enables efficient navigation and management of files in the Linux environment.</p>
-<h2 id="creating-copying-deleting-and-renaming">Creating, copying, deleting and renaming</h2>
-<ul>
-<li><code>touch</code> creates a new, empty file</li>
-<li><code>rm</code> permanently remove file/directory</li>
-<li>
-<p><code>cp</code> copying files/directories from one location to another; <strong>example:</strong></p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cp<span class="w"> </span><span class="o">[</span>...file/directory-sources<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span>
-
-<span class="c1"># [file/directory-sources] specifies the sources of the files or directories you want to copy. And the [destination] argument specifies the location you want to copy the file to.</span>
-</code></pre></div>
-</li>
-<li>
-<p><code>mv</code> versatile tool used for moving or renaming files/directories; <strong>example:</strong></p>
-<h3 id="renaming-files-with-mv">Renaming Files with ‘mv’</h3>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mv<span class="w"> </span>helloworld.txt<span class="w"> </span>hellolinux.txt
-
-<span class="c1"># Output:</span>
-<span class="c1"># The file previously named &#39;helloworld.txt&#39; is now named &#39;hellolinux.txt&#39;</span>
-</code></pre></div>
-<h3 id="moving-files-with-mv">Moving Files with ‘mv’</h3>
-<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/home/user/Documents/old_folder/file.txt<span class="w"> </span>/home/user/Documents/new_folder/
-
-<span class="c1"># Output:</span>
-<span class="c1"># &#39;file.txt&#39; is moved from &#39;old_folder&#39; to &#39;new_folder&#39;</span>
-</code></pre></div>
-<h3 id="moving-and-renaming-directories">Moving and Renaming Directories</h3>
-<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>old_directory/<span class="w"> </span>new_directory/
-
-<span class="c1"># Output:</span>
-<span class="c1"># The directory &#39;old_directory&#39; is now renamed to &#39;new_directory&#39;</span>
-</code></pre></div>
-<h3 id="using-wildcards-with-mv">Using Wildcards with ‘mv’</h3>
-<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>*.txt<span class="w"> </span>text_files/
-
-<span class="c1"># Output:</span>
-<span class="c1"># All .txt files are moved to the &#39;text_files&#39; directory</span>
-</code></pre></div>
-<div class="admonition danger">
-<p class="admonition-title">Overwriting Files</p>
-<p>A potential pitfall with the ‘mv’ command is that it overwrites files without any warning. If a file with the destination name already exists, the ‘mv’ command will overwrite it.</p>
+<div id="mkdocs-encrypted-content" style="display:none">b5u0h2VUgCvxDnlz/qrezQ==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
-<h3 id="overwriting-files">Overwriting Files</h3>
-<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
 
-<span class="c1"># Output:</span>
-<span class="c1"># &#39;file1.txt&#39; is renamed to &#39;file2.txt&#39;, overwriting the existing &#39;file2.txt&#39;</span>
-</code></pre></div>
-</li>
-<li>
-<p><code>cp -r</code> i <code>rm -r</code> označava rekurzivno kopiranje i brisanje, briše direktorij i sve datoteke i poddirektorije u njemu</p>
-<ul>
-<li>kod naredbe <code>mv</code>, za razliku od <code>cp</code> i <code>rm</code>, nema potrebe za rekurzijom; radi se o preimenovanju</li>
-</ul>
-</li>
-</ul>
-<h2 id="glob-patterns">Glob patterns</h2>
-<p>File globbing is pattern-matching mechanism used for filename expansion in the shell. The term "glob" represents the concept of matching patterns globally or expansively across multiple filenames or paths. It allows users to specify wildcard patterns to match files or directories based on certain criteria.</p>
-<ul>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob patterns</a>, globs ili wildcards</p>
-<ul>
-<li>koriste se za pretraživanje uzoraka koji odgovaraju zadanome</li>
-<li>način da više datoteka koje imaju slična imena povežemo jednom naredbom</li>
-<li>glob != regex, samo ima donekle sličnu sintaksu i namjenu</li>
-</ul>
-</li>
-<li>
-<p><code>?</code> -- is used to match exactly one character, any will do</p>
-</li>
-<li><code>*</code> -- is used to match any number of characters (zero or more)</li>
-<li><code>[chars]</code> -- can be used to match exact characters or you can also specify a range within [] <code>[A-Z]</code>, <code>[a-z]</code> ili <code>[0-9]</code></li>
-<li>
-<p><code>!</code> -- is used to exclude characters from the list that is specified within the square brackets</p>
-</li>
-<li>
-<p><code>\</code> -- tzv. <em>prekidni znak</em></p>
-</li>
-</ul>
-<h2 id="pretrazivanje-datotecnog-sustava">Pretraživanje datotečnog sustava</h2>
-<ul>
-<li>
-<p><code>find</code> u specificiranim direktorijima traži datoteke ili skupine datoteka</p>
-<ul>
-<li>sintaksa: <code>find &lt;direktoriji&gt; &lt;uvjeti&gt;</code> (direktorij koji se pretražuje <em>mora</em> biti naveden prije uvjeta)</li>
-<li>direktorij može biti dan korištenjem apsolutnog ili relativnog referenciranja</li>
-<li>može koristiti regularne izraze parametar <code>-regex</code></li>
-<li>
-<p>pregled često korištenih parametara:</p>
-<table>
-<thead>
-<tr>
-<th>Parametar</th>
-<th>Ograničenje pretraživanja</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-user &lt;ime korisnika&gt;</code></td>
-<td>Samo datoteke određenog korisnika</td>
-</tr>
-<tr>
-<td><code>-size &lt;veličina&gt;</code></td>
-<td>Samo datoteke specifične veličine</td>
-</tr>
-<tr>
-<td><code>-type f</code></td>
-<td>Samo datoteke (ne direktoriji)</td>
-</tr>
-<tr>
-<td><code>-type d</code></td>
-<td>Samo direktoriji</td>
-</tr>
-<tr>
-<td><code>-name &lt;ime datoteke&gt;</code></td>
-<td>Samo datoteke određenog imena</td>
-</tr>
-<tr>
-<td><code>-atime &lt;broj dana&gt;</code></td>
-<td>Samo datoteke čije je vrijeme posljednjeg pristupa manje od navedenog u danima</td>
-</tr>
-<tr>
-<td><code>-amin &lt;broj minuta&gt;</code></td>
-<td>Isto kao iznad samo se navode minute umjesto dana</td>
-</tr>
-<tr>
-<td><code>-ctime &lt;broj dana&gt;</code></td>
-<td>Samo datoteke čije je vrijeme izrade manje od navedenog u danima</td>
-</tr>
-<tr>
-<td><code>-cmin &lt;broj minuta&gt;</code></td>
-<td>Isto kao iznad samo se navode minute umjesto dana</td>
-</tr>
-<tr>
-<td><code>-mtime &lt;broj dana&gt;</code></td>
-<td>Samo datoteke čije je vrijeme posljednje promjene manje od navedenog u danima</td>
-</tr>
-<tr>
-<td><code>-mmin &lt;broj minuta&gt;</code></td>
-<td>Isto kao iznad samo se navode minute umjesto dana</td>
-</tr>
-<tr>
-<td><code>-newer &lt;datoteka&gt;</code></td>
-<td>Samo datoteke stvorene prije određene datoteke</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>naredba je spora jer mora provjeriti svaki file koji se nalazi na zadanoj putanji</p>
-</li>
-<li>
-<p>česte primjene:</p>
-<ul>
-<li>brisanje nađenih datoteka naredbom find: <code>find ... -exec rm {} \;</code> ili <code>find ... | xargs rm</code></li>
-<li>pretraživanje nađenih datoteka: <code>find ... -type f | xargs grep &lt;izraz&gt;</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><code>locate</code> pretražuje bazu datoteka za datoteku koja u imenu sadrži dani niz znakova</p>
-<ul>
-<li>sintaksa: <code>locate &lt;ime datoteke&gt;</code></li>
-<li>rezultat pretraživanja je puna putanja do tražene datoteke</li>
-<li>pretražuje brže jer stvara bazu imena datoteka koje postoje u datotećnom sustavu te nema potrebe pretraživati svaku datoteku koja postoji na datotečnom sustavu; baza se osvježava naredbom <code>updatedb</code>, na većini modernih distribucija se pokreće automatski na dnevnoj bazi</li>
-</ul>
-</li>
-<li>
-<p><code>which</code> se koristi kada želimo saznati punu putanju do određene izvršne datoteke datoteke koja se nalazi u nekom od direktorija navedenom u varijabli okoline <code>PATH</code></p>
-</li>
-<li>
-<p><code>whereis</code> pretražuje lokaciju izvornog koda, binarnih datoteka i stranica priručnika</p>
-<ul>
-<li>
-<p>pregled često korištenih parametara:</p>
-<table>
-<thead>
-<tr>
-<th>Parametar</th>
-<th>Uloga</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-b</code></td>
-<td>traženje binarnih datoteka</td>
-</tr>
-<tr>
-<td><code>-m</code></td>
-<td>traženje stranica priručnika</td>
-</tr>
-<tr>
-<td><code>-s</code></td>
-<td>traženje izvršnog koda</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-</li>
-</ul>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "l2docs/linux/file-management.html";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["U6nwybLphV6US3WzGIfyBg==;iK/C+VVcQ+x747G+SMmjmlQjtmvfk6SCGthI5wGrx7m3fXDBUJRV2bcUuhdG9R/4tjhwqYB0krFSYZqCKP7V+ar7Jm9j8D8DgWosFB8Ir2+DIoO3jZ9hFfiH4wKVnWZ7;PONngt6I3lw6qOUPPDcWMQ=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 

@@ -1144,32 +1144,33 @@
                   
 
 
-<h1 id="differences-among-a-cname-alias-and-url-records">Differences Among A, CNAME, ALIAS, and URL records</h1>
-<p><code>A</code>, <code>CNAME</code>, <code>ALIAS</code>, and <code>URL</code> records are all possible solutions to point a host name (“name”) to your site. However, they have small differences that affect how the client reaches your site.</p>
-<p><code>A</code> and <code>CNAME</code> records are standard DNS records. <code>ALIAS</code> and <code>URL</code> records are custom DNS records. Both of them are translated internally into <code>A</code> records to ensure compatibility with the DNS protocol.</p>
-<h2 id="understanding-the-differences">Understanding the differences</h2>
-<p>These are the main differences:</p>
-<ul>
-<li>The <code>A</code> record maps a name to one or more IP addresses when the IP are known and stable.</li>
-<li>The <code>CNAME</code> record maps a name to another name. It should only be used when there are no other records on that name.</li>
-<li>The <code>ALIAS</code> record maps a name to another name, but can coexist with other records on that name.</li>
-<li>The <code>URL</code> record redirects the name to the target name using the HTTP 301 status code.</li>
-</ul>
-<p>Important rules:</p>
-<ul>
-<li>The <code>A</code>, <code>CNAME</code>, and <code>ALIAS</code> records cause a name to resolve to an IP. Conversely, the <code>URL</code> record redirects the name to a destination. The <code>URL</code> record is a simple and effective way to apply a redirect for one name to another name, for example redirecting www.example.com to example.com.</li>
-<li>The <code>A</code> name must resolve to an <code>IP</code>. The <code>CNAME</code> and <code>ALIAS</code> records must point to a name.</li>
-</ul>
-<h2 id="which-one-to-use">Which one to use</h2>
-<p>Understanding the difference between <code>A</code> name and <code>CNAME</code> records will help you decide.</p>
-<p>General rules:</p>
-<ul>
-<li>Use an <code>A</code> record if you manage which IP addresses are assigned to a particular machine, or if the <code>IP</code> are fixed (this is the most common case).</li>
-<li>Use a <code>CNAME</code> record if you want to alias one name to another name, and you don’t need other records (such as <code>MX</code> records for emails) for the same name.</li>
-<li>Use an <code>ALIAS</code> record if you’re trying to alias the root domain (apex zone), or if you need other records for the same name.</li>
-<li>Use the <code>URL</code> record if you want the name to redirect (change address) instead of resolving to a destination.</li>
-</ul>
-<p><strong>You should never use a CNAME record for your root domain name (e.g. example.com).</strong></p>
+<div id="mkdocs-encrypted-content" style="display:none">oVj3WhKyg8z5utHkIn2JKA==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "l2docs/difference-a-cname-alias.html";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["U6nwybLphV6US3WzGIfyBg==;iK/C+VVcQ+x747G+SMmjmlQjtmvfk6SCGthI5wGrx7m3fXDBUJRV2bcUuhdG9R/4tjhwqYB0krFSYZqCKP7V+ar7Jm9j8D8DgWosFB8Ir2+DIoO3jZ9hFfiH4wKVnWZ7;PONngt6I3lw6qOUPPDcWMQ=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="./assets/javascripts/decrypt-contents.js" defer></script>
 
 
 

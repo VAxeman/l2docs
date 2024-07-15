@@ -1126,88 +1126,33 @@
                   
 
 
-<h1 id="permissions">Permissions</h1>
-<p>Every file and directory in your UNIX/Linux system has the following 3 permissions defined for all the 3 owners discussed above.</p>
-<ul>
-<li><strong><code>r</code></strong> = read permission</li>
-<li><strong><code>w</code></strong> = write permission</li>
-<li><strong><code>x</code></strong> = execute permission</li>
-<li><strong><code>–</code></strong> = no permission</li>
-</ul>
-<p><code>Read</code> - This permission gives you the authority to open and read a file. Read permission on a directory gives you the ability to list its content.</p>
-<p><code>Write</code> - The write permission gives you the authority to modify the contents of a file. The write permission on a directory gives you the authority to add, remove and rename files stored in the directory. Consider a scenario where you have to write permission on file but do not have write permission on the directory where the file is stored. You will be able to modify the file contents. But you will not be able to rename, move or remove the file from the directory.</p>
-<p><code>Execute</code> - In Windows, an executable program usually has an extension “.exe” and which you can easily run. In Unix/Linux, you cannot run a program unless the execute permission is set. If the execute permission is not set, you might still be able to see/modify the program code(provided read &amp; write permissions are set), but not run it.</p>
-<p>R = 4</p>
-<p>W = 2</p>
-<p>X = 1</p>
-<div class="highlight"><pre><span></span><code>rwx--x--x<span class="w">  </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">   </span><span class="m">181</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">5</span><span class="w">  </span><span class="m">2023</span><span class="w">  </span>cats.jpg
----------<span class="w">  </span>-<span class="w"> </span>----<span class="w"> </span>----<span class="w">   </span>---<span class="w"> </span>------------<span class="w">  </span>--------
-<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">        </span><span class="p">|</span><span class="w">           </span><span class="p">|</span>
-<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">        </span><span class="p">|</span><span class="w">           </span>+-----<span class="w"> </span>file<span class="w"> </span>name
-<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w">        </span>+-----<span class="w"> </span>modification<span class="w"> </span><span class="nb">time</span>
-<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">      </span>+-----<span class="w"> </span>file<span class="w"> </span>size<span class="w"> </span><span class="k">in</span><span class="w"> </span>bytes
-<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>+-----<span class="w"> </span>group<span class="w"> </span>owner
-<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span><span class="p">|</span><span class="w">   </span>+-----<span class="w"> </span>user<span class="w"> </span>owner
-<span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">     </span>+-----<span class="w"> </span>hard<span class="w"> </span>link<span class="w"> </span>count
-<span class="p">|</span><span class="w">    </span>+-----<span class="w"> </span>permissions
-+----<span class="w"> </span>file<span class="w"> </span><span class="nb">type</span>
-</code></pre></div>
-<h2 id="absolutenumeric-mode-in-linux">Absolute(Numeric) Mode in Linux</h2>
-<p>In this mode, file permissions are not represented as characters but a three-digit octal number.</p>
-<table>
-<thead>
-<tr>
-<th>Number</th>
-<th>Permission Type</th>
-<th>Symbol</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>No Permission</td>
-<td>—</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Execute</td>
-<td>–x</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Write</td>
-<td>-w-</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Execute + Write</td>
-<td>-wx</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Read</td>
-<td>r–</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Read + Execute</td>
-<td>r-x</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Read +Write</td>
-<td>rw-</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Read + Write +Execute</td>
-<td>rwx</td>
-</tr>
-</tbody>
-</table>
-<p>For example, finding files/directories and changing mode to default values:</p>
-<p><code>find . -type f -exec chmod 644 {}  \;</code></p>
-<p><code>find . -type d -exec chmod 755 {} \;</code></p>
+<div id="mkdocs-encrypted-content" style="display:none">D7SXP7VaBjrNKG0fKpKDig==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "l2docs/linux/permissions.html";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["U6nwybLphV6US3WzGIfyBg==;iK/C+VVcQ+x747G+SMmjmlQjtmvfk6SCGthI5wGrx7m3fXDBUJRV2bcUuhdG9R/4tjhwqYB0krFSYZqCKP7V+ar7Jm9j8D8DgWosFB8Ir2+DIoO3jZ9hFfiH4wKVnWZ7;PONngt6I3lw6qOUPPDcWMQ=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 
