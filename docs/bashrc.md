@@ -87,3 +87,11 @@ for i in {0..4}; do
 done
 }
 ```
+
+Explanations of the Functions
+
+`slow` - A function we use to determine primarily how many PHP processes a user is using at the moment, be sure to be in any directory that is owned by a user you want to check (also gives info on quota, server load/uptime, number of cores and memory)
+`dkim` - Generate a DKIM key for a site be sure to enter a domain with it -> `dkim somesite.com`
+`makecsr` - Generate a CSR for a customer, usually they can make it themselves in the portal, but you might get a request for it, you will need some information for this, search waypoint/help articles
+`iinfo` - Get information about IPs, you can pipe into it or specify a file for it to look through
+`speedt` - A reaaaally basic page load test
