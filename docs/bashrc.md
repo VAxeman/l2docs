@@ -95,3 +95,5 @@ Explanations of the Functions
 `makecsr` - Generate a CSR for a customer, usually they can make it themselves in the portal, but you might get a request for it, you will need some information for this, search waypoint/help articles
 `iinfo` - Get information about IPs, you can pipe into it or specify a file for it to look through
 `speedt` - A reaaaally basic page load test
+
+ -- With love, Dougie <3
