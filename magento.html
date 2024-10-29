@@ -1237,12 +1237,12 @@ Unlucky for them.</p>
 <p>The first command deletes only the expired cache entries while preserving the other cache items, whereas the second one clears the entire cache storage, including external cache (like Redis or Varnish), regardless of expiration.</p>
 <p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:status</span>
 </code></pre></div>
-Used to check the status of various cache types in the application. 
+- Used to check the status of various cache types in the application. 
 When you run this command, it will output a list of cache types along with their current state (enabled 1 or disabled 0).</p>
 <p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:enable &lt;cache_type&gt;</span>
 <span class="go">php bin/magento cache:disable &lt;cache_type&gt;</span>
 </code></pre></div>
-The first command enables a specific cache type in Magento 2, while the second one disables it.
+- The first command enables a specific cache type in Magento 2, while the second one disables it.
 If a cache type is off when it should be on, it can cause slow page loads or other issues.</p>
 
 
