@@ -1282,17 +1282,23 @@ Unlucky for them.</p>
 <p>These commands must be executed as the actual user within the website’s document root and will not work when run as a support agent.</p>
 </div>
 <h3 id="cache-management">Cache management</h3>
-<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:clean</span>
+<div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:clean</span>
 </code></pre></div>
-- Cleans the cache storage.</p>
-<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:flush</span>
+<ul>
+<li>Cleans the cache storage.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:flush</span>
 </code></pre></div>
-- Flushes the cache storage, clearing all cache types. </p>
+<ul>
+<li>Flushes the cache storage, clearing all cache types. </li>
+</ul>
 <p>The first command deletes only the expired cache entries while preserving the other cache items, whereas the second one clears the entire cache storage, including external cache (like Redis or Varnish), regardless of expiration.</p>
-<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:status</span>
+<div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:status</span>
 </code></pre></div>
-- Used to check the status of various cache types in the application. 
-When you run this command, it will output a list of cache types along with their current state (enabled 1 or disabled 0).</p>
+<ul>
+<li>Used to check the status of various cache types in the application. 
+When you run this command, it will output a list of cache types along with their current state (enabled 1 or disabled 0).</li>
+</ul>
 <p>Sample:
 <div class="highlight"><pre><span></span><code><span class="go">Current status:</span>
 <span class="go">                        config: 1</span>
@@ -1314,11 +1320,13 @@ When you run this command, it will output a list of cache types along with their
 <span class="go">             config_webservice: 1</span>
 <span class="go">                     translate: 1</span>
 </code></pre></div></p>
-<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:enable &lt;cache_type&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:enable &lt;cache_type&gt;</span>
 <span class="go">php bin/magento cache:disable &lt;cache_type&gt;</span>
 </code></pre></div>
-- The first command enables a specific cache type in Magento 2, while the second one disables it.
-If a cache type is off when it should be on, it can cause slow page loads or other issues.</p>
+<ul>
+<li>The first command enables a specific cache type in Magento 2, while the second one disables it.
+If a cache type is off when it should be on, it can cause slow page loads or other issues.</li>
+</ul>
 <h3 id="compilation-and-deployment">Compilation and Deployment</h3>
 <div class="highlight"><pre><span></span><code><span class="go">php bin/magento setup:di:compile</span>
 </code></pre></div>
@@ -1332,14 +1340,18 @@ If a cache type is off when it should be on, it can cause slow page loads or oth
 (Probably the best thing in existence alongside cache cleaning)</li>
 </ul>
 <h3 id="index-management">Index Management</h3>
-<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento indexer:status</span>
+<div class="highlight"><pre><span></span><code><span class="go">php bin/magento indexer:status</span>
 </code></pre></div>
-- Checks the status of each indexer to determine whether it's valid and ready for use or if it needs reindexing.
-If an indexer is invalid, any changes made in the backend won’t be visible on the frontend.</p>
-<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento indexer:reindex</span>
+<ul>
+<li>Checks the status of each indexer to determine whether it's valid and ready for use or if it needs reindexing.
+If an indexer is invalid, any changes made in the backend won’t be visible on the frontend.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="go">php bin/magento indexer:reindex</span>
 </code></pre></div>
-- Rebuilds indexes in Magento to help the store quickly find and display the latest information.
-For example, when product prices are updated or new products are added to the catalog.</p>
+<ul>
+<li>Rebuilds indexes in Magento to help the store quickly find and display the latest information.
+For example, when product prices are updated or new products are added to the catalog.</li>
+</ul>
 <h3 id="developer-commands">Developer Commands</h3>
 <div class="highlight"><pre><span></span><code><span class="go">php bin/magento deploy:mode:set &lt;mode&gt;</span>
 </code></pre></div>
