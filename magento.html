@@ -887,6 +887,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#compilation-and-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilation and Deployment
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1176,6 +1185,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#compilation-and-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilation and Deployment
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1265,6 +1283,18 @@ When you run this command, it will output a list of cache types along with their
 </code></pre></div>
 - The first command enables a specific cache type in Magento 2, while the second one disables it.
 If a cache type is off when it should be on, it can cause slow page loads or other issues.</p>
+<h3 id="compilation-and-deployment">Compilation and Deployment</h3>
+<div class="highlight"><pre><span></span><code><span class="go">php bin/magento setup:di:compile</span>
+</code></pre></div>
+<ul>
+<li>Generates/compiles the necessary dependency injection (DI) classes (code) and configures the application. (Pretty important stuff)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="go">php bin/magento setup:static-content:deploy</span>
+</code></pre></div>
+<ul>
+<li>Deploys static files like CSS and JavaScript for the front end.
+(Probably the best thing in existence alongside cache cleaning)</li>
+</ul>
 
 
 
