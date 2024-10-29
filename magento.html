@@ -896,6 +896,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#index-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developer-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Commands
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1194,6 +1212,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#index-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developer-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Commands
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1295,6 +1331,22 @@ If a cache type is off when it should be on, it can cause slow page loads or oth
 <li>Deploys static files like CSS and JavaScript for the front end.
 (Probably the best thing in existence alongside cache cleaning)</li>
 </ul>
+<h3 id="index-management">Index Management</h3>
+<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento indexer:status</span>
+</code></pre></div>
+- Checks the status of each indexer to determine whether it's valid and ready for use or if it needs reindexing.
+If an indexer is invalid, any changes made in the backend won’t be visible on the frontend.</p>
+<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento indexer:reindex</span>
+</code></pre></div>
+- Rebuilds indexes in Magento to help the store quickly find and display the latest information.
+For example, when product prices are updated or new products are added to the catalog.</p>
+<h3 id="developer-commands">Developer Commands</h3>
+<div class="highlight"><pre><span></span><code><span class="go">php bin/magento deploy:mode:set &lt;mode&gt;</span>
+</code></pre></div>
+<ul>
+<li>Sets the site's deployment mode, where <mode> can be default, developer, or production.</li>
+</ul>
+<p>The developer mode gives more verbose error messages (troubleshooting purposes), while production should be used for live environments seeing as it optimizes performance. <em>Default is like the middle child, no one even knows it exists.</em></p>
 
 
 
