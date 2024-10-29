@@ -1229,16 +1229,13 @@ Unlucky for them.</p>
 </div>
 <h3 id="cache-management">Cache management</h3>
 <p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:clean</span>
-<span class="go">``` - Cleans the cache storage.</span>
-
-<span class="go">```console</span>
-<span class="go">php bin/magento cache:flush</span>
-<span class="go">``` - Flushes the cache storage, clearing all cache types. </span>
-
-<span class="go">The first command deletes only the expired cache entries while preserving the other cache items, whereas the second one clears the entire cache storage, including external cache (like Redis or Varnish), regardless of expiration.</span>
-
-<span class="go">```console</span>
-<span class="go">php bin/magento cache:status</span>
+</code></pre></div>
+- Cleans the cache storage.</p>
+<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:flush</span>
+</code></pre></div>
+- Flushes the cache storage, clearing all cache types. </p>
+<p>The first command deletes only the expired cache entries while preserving the other cache items, whereas the second one clears the entire cache storage, including external cache (like Redis or Varnish), regardless of expiration.</p>
+<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:status</span>
 </code></pre></div>
 Used to check the status of various cache types in the application. 
 When you run this command, it will output a list of cache types along with their current state (enabled 1 or disabled 0).</p>
