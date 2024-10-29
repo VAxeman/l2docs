@@ -1239,6 +1239,27 @@ Unlucky for them.</p>
 </code></pre></div>
 - Used to check the status of various cache types in the application. 
 When you run this command, it will output a list of cache types along with their current state (enabled 1 or disabled 0).</p>
+<p>Sample:
+<div class="highlight"><pre><span></span><code><span class="go">Current status:</span>
+<span class="go">                        config: 1</span>
+<span class="go">                        layout: 1</span>
+<span class="go">                    block_html: 1</span>
+<span class="go">                   collections: 1</span>
+<span class="go">                    reflection: 1</span>
+<span class="go">                        db_ddl: 1</span>
+<span class="go">               compiled_config: 1</span>
+<span class="go">             webhooks_response: 1</span>
+<span class="go">                           eav: 1</span>
+<span class="go">         customer_notification: 1</span>
+<span class="go"> graphql_query_resolver_result: 1</span>
+<span class="go">            config_integration: 1</span>
+<span class="go">        config_integration_api: 1</span>
+<span class="go">                  admin_ui_sdk: 1</span>
+<span class="go">                     full_page: 1</span>
+<span class="go">                   target_rule: 1</span>
+<span class="go">             config_webservice: 1</span>
+<span class="go">                     translate: 1</span>
+</code></pre></div></p>
 <p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:enable &lt;cache_type&gt;</span>
 <span class="go">php bin/magento cache:disable &lt;cache_type&gt;</span>
 </code></pre></div>
