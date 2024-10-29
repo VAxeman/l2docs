@@ -1205,7 +1205,7 @@
 <li>
 <p>Version</p>
 <p>Magento 1 has reached its end of life (EOL) in 2020 and is no longer supported.
-This means that the Magento team no longer provides updates, patches, or official support for this version. (please update to Magento 2) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M445.7 127.9V384l-63.4 36.5V164.7L223.8 73.1 65.2 164.7l.4 255.9L2.3 384V128.1L224.2 0l221.5 127.9zM255.6 420.5 224 438.9l-31.8-18.2v-256l-63.3 36.6.1 255.9 94.9 54.9 95.1-54.9v-256l-63.4-36.6v255.9z"/></svg></span></p>
+This means that the Magento team no longer provides updates, patches, or official support for this version. (please update to Magento 2)</p>
 </li>
 <li>
 <p>Structure</p>
@@ -1228,10 +1228,18 @@ Unlucky for them.</p>
 <p>These commands must be executed as the actual user within the website’s document root and will not work when run as a support agent.</p>
 </div>
 <h3 id="cache-management">Cache management</h3>
-<p>php bin/magento cache:clean - Cleans the cache storage. 
-php bin/magento cache:flush - Flushes the cache storage, clearing all cache types. </p>
-<p>The first command deletes only the expired cache entries while preserving the other cache items, whereas the second one clears the entire cache storage, including external cache (like Redis or Varnish), regardless of expiration.</p>
-<p>php bin/magento cache:status
+<p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:clean</span>
+<span class="go">``` - Cleans the cache storage.</span>
+
+<span class="go">```console</span>
+<span class="go">php bin/magento cache:flush</span>
+<span class="go">``` - Flushes the cache storage, clearing all cache types. </span>
+
+<span class="go">The first command deletes only the expired cache entries while preserving the other cache items, whereas the second one clears the entire cache storage, including external cache (like Redis or Varnish), regardless of expiration.</span>
+
+<span class="go">```console</span>
+<span class="go">php bin/magento cache:status</span>
+</code></pre></div>
 Used to check the status of various cache types in the application. 
 When you run this command, it will output a list of cache types along with their current state (enabled 1 or disabled 0).</p>
 <p><div class="highlight"><pre><span></span><code><span class="go">php bin/magento cache:enable &lt;cache_type&gt;</span>
