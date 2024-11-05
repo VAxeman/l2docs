@@ -1205,8 +1205,42 @@
                   
 
 
-<h1 id="basic-tools-for-computer-network-analysis">Basic tools for computer network analysis</h1>
+<h1 id="basic-tools-for-computer-network-analysis">Basic Tools for Computer Network Analysis</h1>
+<p>When working with computer networks, having the right tools can make all the difference in troubleshooting and understanding network issues. This guide introduces three essential tools: <strong>ping</strong>, <strong>traceroute</strong> and <strong>netstat</strong>. Each of these tools provides valuable information to help you diagnose what’s going on in your network.</p>
 <h2 id="ping">ping</h2>
+<p>'ping' is a simple tool that checks if a device (like a website or another computer) is reachable over the network. It sends packets of data to the target and waits for a response. Think of it like shouting "Hello!" and listening for an answer.</p>
+<p>How is it used, you may ask? It is as easy as it looks. Open up your terminal and type in:</p>
+<div class="highlight"><pre><span></span><code><span class="go">ping &lt;hostname or IP address&gt;</span>
+</code></pre></div>
+<p>Example listed below:</p>
+<div class="highlight"><pre><span></span><code><span class="go">ping google.com</span>
+<span class="go">Pinging google.com [172.217.169.110] with 32 bytes of data:</span>
+<span class="go">Reply from 172.217.169.110: bytes=32 time=83ms TTL=116</span>
+<span class="go">Reply from 172.217.169.110: bytes=32 time=22ms TTL=116</span>
+<span class="go">Reply from 172.217.169.110: bytes=32 time=21ms TTL=116</span>
+<span class="go">Reply from 172.217.169.110: bytes=32 time=23ms TTL=116</span>
+
+<span class="go">Ping statistics for 172.217.169.110:</span>
+<span class="go">    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),</span>
+<span class="go">Approximate round trip times in milli-seconds:</span>
+<span class="go">    Minimum = 21ms, Maximum = 83ms, Average = 37ms</span>
+</code></pre></div>
+<p>Now, let’s get to analyzing it. What is this output we just received?</p>
+<ul>
+<li>
+<p>Response Time: You'll see how long it takes for a message to go to the target and come back.
+The round-trip times for messages ranged from 21ms to 83ms, with an average of 37ms</p>
+</li>
+<li>
+<p>Packet Loss: This tells you if any messages disappeared along the way.
+All 4 packets were successfully received with 0% loss, meaning none of the messages failed to reach the server.</p>
+</li>
+<li>
+<p>TTL (Time to Live): This shows how many hops the packet made before it reached its destination.
+The TTL value of 116 indicates the number of hops the packet made to reach Google’s server; a higher number suggests a shorter route.</p>
+</li>
+</ul>
+<p>All in all, the results are wonderful.</p>
 <h2 id="traceroute-tracepath">traceroute &amp; tracepath</h2>
 <h2 id="netstat">netstat</h2>
 
