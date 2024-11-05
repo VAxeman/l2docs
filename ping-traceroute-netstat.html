@@ -1274,6 +1274,33 @@ Open up your terminal and type in:</p>
 <span class="go">23  * * *</span>
 <span class="go">24  * pd-in-f102.1e100.net (142.251.179.102)  20.930 ms *</span>
 </code></pre></div>
+<p>Now, let’s get to analyzing it. What is this output we just received?</p>
+<ul>
+<li>
+<p><strong>Initial Information</strong></p>
+<ul>
+<li>Destination: traceroute to google.com (142.251.179.102): This indicates the hostname and its corresponding IP address that you are trying to reach.</li>
+<li>Max Hops: 30 hops max: This specifies the maximum number of hops (routers) that the traceroute utility will attempt to reach before timing out.</li>
+<li>Packet Size: 60 byte packets: Indicates the size of the packets being sent.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hops</strong>: A list of each router your data passed through, with their IP addresses.
+For example, hop 1 is 208.69.120.1, hop 2 is 192.240.191.186, and so on.</p>
+</li>
+<li>
+<p><strong>Response Times</strong>: See how long it takes to get to each hop.
+For instance, hop 1 has response times of 22.087 ms, 22.045 ms, and 22.004 ms.</p>
+</li>
+<li>
+<p><strong>Star (*) Entries</strong>
+In the output, there are lines with asterisks (<em> * </em>). This means that the packets did not receive a response from those hops.</p>
+</li>
+<li>
+<p><strong>Final Destination</strong>
+The last hop in the output (hop 24) indicates that the packets finally reached the destination host pd-in-f102.1e100.net (142.251.179.102). The response time of 20.930 ms reflects the time taken to reach Google's server.</p>
+</li>
+</ul>
 <h2 id="netstat">netstat</h2>
 
 
