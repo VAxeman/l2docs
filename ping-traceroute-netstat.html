@@ -487,9 +487,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#traceroute-tracepath" class="md-nav__link">
+  <a href="#traceroute" class="md-nav__link">
     <span class="md-ellipsis">
-      traceroute &amp; tracepath
+      traceroute
     </span>
   </a>
   
@@ -1173,9 +1173,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#traceroute-tracepath" class="md-nav__link">
+  <a href="#traceroute" class="md-nav__link">
     <span class="md-ellipsis">
-      traceroute &amp; tracepath
+      traceroute
     </span>
   </a>
   
@@ -1241,7 +1241,39 @@
 </li>
 </ul>
 <p>All in all, the results are wonderful.</p>
-<h2 id="traceroute-tracepath">traceroute &amp; tracepath</h2>
+<h2 id="traceroute">traceroute</h2>
+<p><code>traceroute</code> is a tool used to find the path your data takes to reach a destination. They send packets to the target with incrementally larger TTL values, so you can see each router (or hop) your data passes through.</p>
+<p>How is it used, you may ask? Similar procedure as ping.
+Open up your terminal and type in:</p>
+<div class="highlight"><pre><span></span><code><span class="go">traceroute &lt;hostname or IP address&gt;</span>
+</code></pre></div>
+<p>Example listed below:</p>
+<div class="highlight"><pre><span></span><code><span class="go">traceroute to google.com (142.251.179.102), 30 hops max, 60 byte packets</span>
+<span class="go"> 1  nx-mel-vlan20.dx1b.nexcess.net (208.69.120.1)  22.087 ms  22.045 ms  22.004 ms</span>
+<span class="go"> 2  xldx1b.core-1.mel.dtw.nexcess.net (192.240.191.186)  0.416 ms  0.389 ms  0.388 ms</span>
+<span class="go"> 3  xlcore1.edge-1.mel.dtw.nexcess.net (192.240.191.164)  0.442 ms  0.403 ms  0.288 ms</span>
+<span class="go"> 4  xe-10-1-0.bar1.Detroit1.Level3.net (4.15.104.5)  16.561 ms  16.542 ms  16.506 ms</span>
+<span class="go"> 5  ae2.3601.edge3.Chicago10.net.lumen.tech (4.69.206.246)  42.470 ms  42.398 ms  42.384 ms</span>
+<span class="go"> 6  15169-3356-chi.sp.lumen.tech (4.68.127.114)  69.339 ms  32.278 ms  32.144 ms</span>
+<span class="go"> 7  * * *</span>
+<span class="go"> 8  142.251.231.68 (142.251.231.68)  31.393 ms 142.251.60.206 (142.251.60.206)  31.543 ms 142.251.60.212 (142.251.60.212)  32.156 ms</span>
+<span class="go"> 9  192.178.249.206 (192.178.249.206)  31.542 ms 192.178.249.234 (192.178.249.234)  32.406 ms 192.178.105.216 (192.178.105.216)  34.990 ms</span>
+<span class="go">10  142.251.234.29 (142.251.234.29)  32.219 ms 192.178.99.91 (192.178.99.91)  31.648 ms 142.251.233.223 (142.251.233.223)  34.231 ms</span>
+<span class="go">11  192.178.81.224 (192.178.81.224)  20.526 ms 192.178.81.234 (192.178.81.234)  20.633 ms 192.178.81.224 (192.178.81.224)  20.629 ms</span>
+<span class="go">12  192.178.244.223 (192.178.244.223)  22.642 ms 142.251.76.103 (142.251.76.103)  22.018 ms 192.178.244.231 (192.178.244.231)  20.826 ms</span>
+<span class="go">13  192.178.81.193 (192.178.81.193)  20.488 ms 172.253.66.221 (172.253.66.221)  21.061 ms 108.170.238.3 (108.170.238.3)  21.405 ms</span>
+<span class="go">14  192.178.75.151 (192.178.75.151)  21.719 ms 209.85.253.83 (209.85.253.83)  21.861 ms 192.178.75.151 (192.178.75.151)  23.250 ms</span>
+<span class="go">15  * * *</span>
+<span class="go">16  * * *</span>
+<span class="go">17  * * *</span>
+<span class="go">18  * * *</span>
+<span class="go">19  * * *</span>
+<span class="go">20  * * *</span>
+<span class="go">21  * * *</span>
+<span class="go">22  * * *</span>
+<span class="go">23  * * *</span>
+<span class="go">24  * pd-in-f102.1e100.net (142.251.179.102)  20.930 ms *</span>
+</code></pre></div>
 <h2 id="netstat">netstat</h2>
 
 
