@@ -773,6 +773,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#common-compression-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Compression Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-archiving-and-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Archiving and Compression
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1220,6 +1238,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#common-compression-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Compression Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-archiving-and-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Archiving and Compression
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1244,10 +1280,10 @@
 <p>Compression refers to reducing the size of files to save storage space or to speed up data transfer. Compression can be lossless, meaning the original file can be perfectly reconstructed from the compressed data, or lossy, which sacrifices some detail for better space efficiency.</p>
 <h2 id="common-archiving">Common Archiving</h2>
 <ul>
-<li>tar</li>
+<li><strong>tar</strong></li>
 </ul>
 <p>The <code>tar</code> command (short for "tape archive") is one of the most widely used tools for creating archive files in Linux. It preserves file attributes such as permissions and timestamps, making it ideal for backups.</p>
-<p><strong>Basic Commands</strong></p>
+<p><strong>Basic Commands:</strong></p>
 <p>Create an archive: Use the <code>-c</code> option to create an archive. The <code>-v</code> option displays the progress, and the <code>-f</code> option specifies the output filename.
     <div class="highlight"><pre><span></span><code><span class="go">tar -cvf archive.tar /path/to/directory</span>
 </code></pre></div></p>
@@ -1270,10 +1306,10 @@
   <div class="highlight"><pre><span></span><code><span class="go">tar -xJvf archive.tar.xz</span>
 </code></pre></div></p>
 <ul>
-<li>zip</li>
+<li><strong>zip</strong></li>
 </ul>
 <p>The <code>zip</code> utility combines archiving and compression into a single step.</p>
-<p><strong>Basic Commands</strong></p>
+<p><strong>Basic Commands:</strong></p>
 <p>Create a ZIP archive: The <code>-r</code> option allows you to include subdirectories recursively.
   <div class="highlight"><pre><span></span><code><span class="go">zip -r archive.zip /path/to/directory</span>
 </code></pre></div></p>
@@ -1289,6 +1325,57 @@
 <p>Remove a file from a ZIP archive
   <div class="highlight"><pre><span></span><code><span class="go">zip -d archive.zip filetoremove.txt</span>
 </code></pre></div></p>
+<h2 id="common-compression-tools">Common Compression Tools</h2>
+<ul>
+<li><strong>gzip</strong></li>
+</ul>
+<p><code>gzip</code> (GNU zip) is a popular compression tool that reduces the size of individual files. It works well for text files and can achieve a significant reduction in size.</p>
+<p><strong>Basic Commands:</strong></p>
+<p>Compress a file: This replaces the original file with a compressed version ending in <code>.gz</code>.
+  <div class="highlight"><pre><span></span><code><span class="go">gzip file.txt</span>
+</code></pre></div></p>
+<p>Decompress a file: Returns the file to its original state.
+  <div class="highlight"><pre><span></span><code><span class="go">gunzip file.txt.gz</span>
+</code></pre></div></p>
+<p>Compress without removing the original file: Use the <code>-k</code> option.
+  <div class="highlight"><pre><span></span><code><span class="go">gzip -k file.txt</span>
+</code></pre></div></p>
+<p>View compressed file information:
+  <div class="highlight"><pre><span></span><code><span class="go">gzip -l file.txt.gz</span>
+</code></pre></div></p>
+<ul>
+<li><strong>xz</strong></li>
+</ul>
+<p><code>xz</code> is another compression tool that provides a higher compression ratio than <code>gzip</code>, making it suitable for larger files.</p>
+<p><strong>Basic Commands:</strong></p>
+<p>Compress a file: Similar to <code>gzip</code>, this will convert <code>file.txt</code> to <code>file.txt.xz</code>.
+    <div class="highlight"><pre><span></span><code><span class="go">xz file.txt</span>
+</code></pre></div></p>
+<p>Decompress a file::
+    <div class="highlight"><pre><span></span><code><span class="go">unxz file.txt.xz</span>
+</code></pre></div></p>
+<p>View compression details:
+    <div class="highlight"><pre><span></span><code><span class="go">xz --list file.txt.xz</span>
+</code></pre></div></p>
+<h2 id="combining-archiving-and-compression">Combining Archiving and Compression</h2>
+<p>Combining archiving and compression allows you to compress an entire directory's contents efficiently. You can create a compressed archive using <code>tar</code> in conjunction with <code>gzip</code> or <code>xz</code> for better efficiency.</p>
+<p>Creating a .tar.gz archive:
+  <div class="highlight"><pre><span></span><code><span class="go">tar -czvf archive.tar.gz /path/to/directory</span>
+</code></pre></div></p>
+<p>Creating a .tar.xz archive:<br />
+  <div class="highlight"><pre><span></span><code><span class="go">tar -cJvf archive.tar.xz /path/to/directory</span>
+</code></pre></div></p>
+<p>Extracting from a compressed .tar.gz archive:
+  <div class="highlight"><pre><span></span><code><span class="go">tar -xzvf archive.tar.gz</span>
+</code></pre></div></p>
+<p>Extracting from a compressed .tar.xz archive:<br />
+  <div class="highlight"><pre><span></span><code><span class="go">tar -xJvf archive.tar.xz</span>
+</code></pre></div></p>
+<p>```success "Best Practices"</p>
+<div class="highlight"><pre><span></span><code>**Use Verbose Mode**: When creating or extracting archives, include the `-v` option to ensure you can see which files are being added or extracted.
+
+**Disk Space Considerations**: When compressing large amounts of data, monitor disk space to prevent errors or failed operations due to insufficient storage. (PLEASE PLEASE PLEASE)
+</code></pre></div>
 
 
 
