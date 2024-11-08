@@ -1625,7 +1625,7 @@ For example, renice -n 10 1234 will change the nice level of the process with PI
 <p>Umask is a user file-creation mask controlling the default file permissions given when a new file or directory is created. It specifies which permission bits should be disabled by default.
 The umask value is subtracted from the maximum permissions for files and directories, which are <code>666</code> and <code>777</code>.</p>
 <details class="question">
-<summary>Which of the following settings for umask ensures that new files have the default permissions <code>-rw-r-----</code>?</summary>
+<summary>Which of the following settings for umask ensures that new files have the default permissions <code>-rw-r----</code>?</summary>
 <p>The correct setting for umask that ensures that new files have the default permissions <code>-rw- r-----</code> is <code>0027</code>.
 Since the first digit of the umask value is for the special permissions, such as setuid, setgid, and sticky bit, we need to add a zero at the beginning to indicate that no special permissions are set.</p>
 </details>
