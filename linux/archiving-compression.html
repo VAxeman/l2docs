@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#archiving-and-compression-in-linux" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -687,6 +692,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Archiving and compression
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="archiving-compression.html" class="md-nav__link md-nav__link--active">
         
@@ -697,6 +715,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-and-explanation-of-our-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction and explanation of our topic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction and explanation of our topic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Archiving?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Compression?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Archiving
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1090,6 +1169,58 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-and-explanation-of-our-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction and explanation of our topic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction and explanation of our topic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Archiving?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Compression?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Archiving
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1104,12 +1235,55 @@
                   
 
 
-  <h1>Archiving and compression</h1>
-
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Needs to be added</p>
-</div>
+<h1 id="archiving-and-compression-in-linux">Archiving and Compression in Linux</h1>
+<h2 id="introduction-and-explanation-of-our-topic">Introduction and explanation of our topic</h2>
+<p>Archiving and compressing files are essential steps in managing data, helping to conserve disk space and keep multiple files organized for easier storage and transfer. If you're using Linux, you'll find a range of tools and utilities that can make these tasks simple and efficient.</p>
+<h3 id="what-is-archiving">What is Archiving?</h3>
+<p>Archiving is the process of bundling multiple files and directories into a single file, often referred to as an archive. This helps in preserving the structure of the original files while simplifying management and storage.</p>
+<h3 id="what-is-compression">What is Compression?</h3>
+<p>Compression refers to reducing the size of files to save storage space or to speed up data transfer. Compression can be lossless, meaning the original file can be perfectly reconstructed from the compressed data, or lossy, which sacrifices some detail for better space efficiency.</p>
+<h2 id="common-archiving">Common Archiving</h2>
+<ul>
+<li>tar</li>
+</ul>
+<p>The <code>tar</code> command (short for "tape archive") is one of the most widely used tools for creating archive files in Linux. It preserves file attributes such as permissions and timestamps, making it ideal for backups.</p>
+<p><strong>Basic Commands</strong></p>
+<p>Create an archive: Use the <code>-c</code> option to create an archive. The <code>-v</code> option displays the progress, and the <code>-f</code> option specifies the output filename.
+    <div class="highlight"><pre><span></span><code><span class="go">tar -cvf archive.tar /path/to/directory</span>
+</code></pre></div></p>
+<p>Extract an archive: Use the <code>-x</code> option to extract files. Again, the <code>-v</code> option shows the extraction progress, and the <code>-f</code> option specifies the archive filename.
+    <div class="highlight"><pre><span></span><code><span class="go">tar -xvf archive.tar</span>
+</code></pre></div></p>
+<p>List contents of an archive: Use the <code>-t</code> option to view the files in an archive without extracting them.
+    <div class="highlight"><pre><span></span><code><span class="go">tar -tvf archive.tar</span>
+</code></pre></div></p>
+<p>Create a compressed archive using gzip: Use the <code>-z</code> option for gzip compression, resulting in a <code>.tar.gz</code> file. MOST COMMONLY USED!
+    <div class="highlight"><pre><span></span><code><span class="go">tar -czvf archive.tar.gz /path/to/directory</span>
+</code></pre></div></p>
+<p>Extract a compressed archive
+  <div class="highlight"><pre><span></span><code><span class="go">tar -xzvf archive.tar.gz</span>
+</code></pre></div></p>
+<p>Create a compressed archive using xz:
+  <div class="highlight"><pre><span></span><code><span class="go">tar -cJvf archive.tar.xz /path/to/directory</span>
+</code></pre></div></p>
+<p>Extract a compressed archive:
+  <div class="highlight"><pre><span></span><code><span class="go">tar -xJvf archive.tar.xz</span>
+</code></pre></div></p>
+<ul>
+<li>zip</li>
+</ul>
+<p>The <code>zip</code> utility combines archiving and compression into a single step.</p>
+<p>Basic Commands
+Create a ZIP archive: The <code>-r</code> option allows you to include subdirectories recursively.
+    zip -r archive.zip /path/to/directory</p>
+<p>Extract a ZIP archive: Use the <code>unzip</code> command, which automatically processes the <code>.zip</code> file format.
+    unzip archive.zip</p>
+<p>View the contents without extracting: 
+    unzip -l archive.zip</p>
+<p>Update a ZIP archive by adding new files
+    zip archive.zip newfile.txt</p>
+<p>Remove a file from a ZIP archive
+    zip -d archive.zip filetoremove.txt</p>
 
 
 
