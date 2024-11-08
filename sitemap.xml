@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://vaxeman.github.io/l2docs/linux/boot.html</loc>
+         <lastmod>2024-11-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://vaxeman.github.io/l2docs/linux/file-management.html</loc>
          <lastmod>2024-11-08</lastmod>
          <changefreq>daily</changefreq>
