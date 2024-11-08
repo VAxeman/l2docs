@@ -1550,47 +1550,62 @@ Permissions are often shown using a string of characters (e.g. <code>rwxr-xr--</
 <p><code>locate</code>: Uses a pre-built database to find files quickly. It’s faster but may not be up to date. Use <code>updatedb</code> to refresh the database.</p>
 </li>
 </ul>
-<details class="question">
-<summary>When to use them, you may ask?</summary>
+<div class="admonition question">
+<p class="admonition-title">When to use them, you may ask?</p>
 <p>Essentially, select <code>find</code> for detailed or immediate searches and <code>locate</code> for simple, rapid filename lookups.</p>
-</details>
+</div>
 <h2 id="mount-command">Mount Command</h2>
 <p>The mount command is used to attach a filesystem (like a hard drive or USB) to a specified directory in the Linux directory tree, making it accessible.</p>
 <p>The basic syntax of the mount command is:</p>
-<p><div class="highlight"><pre><span></span><code><span class="go">mount [options] &lt;source&gt; &lt;mount_point&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="go">mount [options] &lt;source&gt; &lt;mount_point&gt;</span>
 </code></pre></div>
-<code>&lt;source&gt;</code>: The device or filesystem to be mounted, such as /dev/sdb1 or a remote filesystem with an appropriate protocol.
-<code>&lt;mount_point&gt;</code>: The directory where the filesystem will be attached.</p>
+<p><code>&lt;source&gt;</code>: The device or filesystem to be mounted, such as /dev/sdb1 or a remote filesystem with an appropriate protocol.</p>
+<p><code>&lt;mount_point&gt;</code>: The directory where the filesystem will be attached.</p>
 <p>Example:
-To mount a USB drive located at <code>/dev/sdb1</code> to a directory called <code>/mnt/usb</code>, you would use:
+To mount a USB drive located at <code>/dev/sdb1</code> to a directory called <code>/mnt/usb</code>, you would use:</p>
 <div class="highlight"><pre><span></span><code><span class="go">sudo mount /dev/sdb1 /mnt/usb</span>
-</code></pre></div></p>
-<p>Unmounting
-To detach or unmount a filesystem, you use the umount command followed by the mount point or the device name. This is crucial for safely removing the device, ensuring all data is written back and the filesystem is no longer in use.</p>
+</code></pre></div>
+<p>Unmounting</p>
+<p>To detach or unmount a filesystem, you use the umount command followed by the mount point or the device name. This is crucial for safely removing the device, ensuring all data is written back and the filesystem is no longer in use.</p>
 <h2 id="iptables-and-csfapf">IPtables and CSF/APF</h2>
 <p>IPtables: A user-space utility that allows an administrator to configure firewall rules within the Linux kernel, controlling incoming and outgoing traffic.</p>
 <p>CSF (ConfigServer Security &amp; Firewall) and APF (Advanced Policy Firewall): Tools that use iptables to provide a frontend for managing firewall rules and enhancing security.</p>
-<p>Linux Filesystem Structure
-/etc/passwd: Stores user account information. 600 permission.
-/etc/shadow: Contains hashed passwords and security information for user accounts. 
-It contains the basic information for each user account, such as the user name, user ID, group ID, home directory, login shell, etc. 644 permission.
-/proc: A pseudo-filesystem that provides process and kernel information.
-/etc/fstab: Contains information related to disk drives and filesystems to be mounted.
-/etc/hosts: Maps hostnames to IP addresses.
-For example, if the hosts option is set to:
-hosts: files dns
-then the /etc/hosts file will be searched first, and if no match is found, the DNS server will be queried next.
-- /etc/nsswitch.conf: Configures the sources used for name service switch.</p>
-<h2 id="sudo-and-wheel-group">Sudo and Wheel Group</h2>
-<p>sudo: A command that allows users to run programs with the privileges of another user (usually root), enhancing security.</p>
-<p>The behavior and permissions of sudo are governed by the /etc/sudoers file, where administrators can specify which users or groups have permission to run specific commands with sudo.
-You need to be VERY CAREFUL when running commands as sudo!</p>
-<p>Wheel Group: A special user group that grants users the ability to execute commands using sudo.
-Like sudo, the groups and permissions associated with the wheel group can also be configured in the /etc/sudoers file.</p>
-<p>To add a user to the wheel group, you could use the following command:
-sudo usermod -aG wheel username</p>
+<p>Linux Filesystem Structure</p>
 <ul>
-<li>To check which groups a user belongs to, you can use the command groups [username] or id [username].</li>
+<li>
+<p><code>/etc/passwd</code>: Stores user account information. 600 permission.</p>
+</li>
+<li>
+<p><code>/etc/shadow</code>: Contains hashed passwords and security information for user accounts. </p>
+<p>It contains the basic information for each user account, such as the user name, user ID, group ID, home directory, login shell, etc. 644 permission.</p>
+</li>
+<li>
+<p><code>/proc</code>: A pseudo-filesystem that provides process and kernel information.</p>
+</li>
+<li>
+<p><code>/etc/fstab</code>: Contains information related to disk drives and filesystems to be mounted.</p>
+</li>
+<li>
+<p><code>/etc/hosts</code>: Maps hostnames to IP addresses.</p>
+<p>For example, if the hosts option is set to:
+hosts: files dns
+then the /etc/hosts file will be searched first, and if no match is found, the DNS server will be queried next.</p>
+</li>
+<li>
+<p><code>/etc/nsswitch.conf</code>: Configures the sources used for name service switch.</p>
+</li>
+</ul>
+<h2 id="sudo-and-wheel-group">Sudo and Wheel Group</h2>
+<p><code>sudo</code>: A command that allows users to run programs with the privileges of another user (usually root), enhancing security.</p>
+<p>The behavior and permissions of <code>sudo</code> are governed by the <code>/etc/sudoers</code> file, where administrators can specify which users or groups have permission to run specific commands with <code>sudo</code>.
+You need to be VERY CAREFUL when running commands as <code>sudo</code>!</p>
+<p>Wheel Group: A special user group that grants users the ability to execute commands using <code>sudo</code>.
+Like <code>sudo</code>, the groups and permissions associated with the wheel group can also be configured in the <code>/etc/sudoers</code> file.</p>
+<p>To add a user to the wheel group, you could use the following command:</p>
+<div class="highlight"><pre><span></span><code><span class="go">sudo usermod -aG wheel username</span>
+</code></pre></div>
+<ul>
+<li>To check which groups a user belongs to, you can use the command groups <code>[username]</code> or id <code>[username]</code>.</li>
 </ul>
 <h2 id="linux-niceness">Linux Niceness</h2>
 <p>Linux niceness refers to the priority level of processes in the scheduler. The niceness value ranges from -20 (highest priority) to 19 (lowest priority).
