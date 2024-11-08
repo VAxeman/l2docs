@@ -675,6 +675,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="BIOS and UEFI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bios-basic-inputoutput-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS (Basic Input/Output System):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uefi-unified-extensible-firmware-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      UEFI (Unified Extensible Firmware Interface):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1281,6 +1305,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="BIOS and UEFI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bios-basic-inputoutput-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS (Basic Input/Output System):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uefi-unified-extensible-firmware-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      UEFI (Unified Extensible Firmware Interface):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1409,30 +1457,50 @@
 <h1 id="linux-boot-process-overview">Linux Boot Process Overview</h1>
 <p>The Linux boot process begins with the BIOS or UEFI performing a POST to check hardware functionality. After initializing the hardware, the firmware executes a bootloader (like GRUB) that loads the Linux kernel into memory. The kernel then initializes system resources and starts the init process, which manages the launch of user-space processes.</p>
 <h2 id="bios-and-uefi">BIOS and UEFI</h2>
-<p>BIOS (Basic Input/Output System):</p>
+<h3 id="bios-basic-inputoutput-system">BIOS (Basic Input/Output System):</h3>
 <p>This is an older type of firmware that helps initialize your computer's hardware when you turn it on. It prepares everything before passing control over to the bootloader, which then starts your operating system.
 It does have some limitations. For example, it can’t boot from hard drives larger than 2.2 TB, which can be a hindrance in today’s world of large-capacity storage.</p>
-<p>UEFI (Unified Extensible Firmware Interface):</p>
+<h3 id="uefi-unified-extensible-firmware-interface">UEFI (Unified Extensible Firmware Interface):</h3>
 <p>UEFI is the modern replacement for BIOS. It's designed to be more powerful and flexible.
 One of the main advantages of UEFI is its support for much larger drives—over 2.2 TB—along with quicker boot times. Additionally, it includes advanced features like Secure Boot, which enhances system security by preventing unauthorized software from loading during startup.</p>
 <h2 id="bootloader">Bootloader</h2>
 <p>A bootloader is a piece of software that loads the operating system (OS) into memory when the computer starts. It serves as an intermediary between the firmware (BIOS/UEFI) and the OS.</p>
-<p>Common Bootloaders:
-GRUB (GNU Grand Unified Bootloader): The most widely used bootloader in Linux systems.
-LILO (Linux Loader): An older bootloader that's largely obsolete.
-Syslinux: A simpler bootloader often used for booting from USB drives.</p>
+<p>Common Bootloaders:</p>
+<ul>
+<li>
+<p>GRUB (GNU Grand Unified Bootloader): The most widely used bootloader in Linux systems.</p>
+</li>
+<li>
+<p>LILO (Linux Loader): An older bootloader that's largely obsolete.</p>
+</li>
+<li>
+<p>Syslinux: A simpler bootloader often used for booting from USB drives.</p>
+</li>
+</ul>
 <h2 id="linux-kernel">Linux Kernel</h2>
 <p>The Linux Kernel is the core of the Linux operating system, managing hardware, system resources, and communication between software and hardware components.</p>
-<p>Four Main Kernel Roles:
-Process Management: Handles process scheduling and CPU time allocation.
-Memory Management: Manages system memory and the resources allocated to processes.
-Device Management: Provides a communication layer for hardware drivers and userspace applications.
-File System Management: Manages file operations and access to various file systems.</p>
+<p>Four Main Kernel Roles:</p>
+<ol>
+<li>
+<p>Process Management: Handles process scheduling and CPU time allocation.</p>
+</li>
+<li>
+<p>Memory Management: Manages system memory and the resources allocated to processes.</p>
+</li>
+<li>
+<p>Device Management: Provides a communication layer for hardware drivers and userspace applications.</p>
+</li>
+<li>
+<p>File System Management: Manages file operations and access to various file systems.</p>
+</li>
+</ol>
 <h2 id="daemons-and-init-systems">Daemons and Init Systems</h2>
 <p>A daemon is a background process that runs continuously and handles system or service tasks without user interaction. </p>
-<p>For example:
-* <code>sshd</code>: The SSH daemon that allows secure remote login and command execution over a network.</p>
+<p>For example:</p>
 <ul>
+<li>
+<p><code>sshd</code>: The SSH daemon that allows secure remote login and command execution over a network.</p>
+</li>
 <li>
 <p><code>httpd</code>: The Apache HTTP Server daemon, which serves web pages to clients over the internet.</p>
 </li>
@@ -1448,9 +1516,11 @@ File System Management: Manages file operations and access to various file syste
 </ul>
 <p>Init is the parent of all processes in a Linux system and is responsible for starting and managing user processes after the kernel has booted.
 The process ID (PID) of the init process is 1.</p>
-<p>Init Systems:
-* sysVinit: The traditional init system using run levels to manage services.</p>
+<p>Init Systems:</p>
 <ul>
+<li>
+<p>sysVinit: The traditional init system using run levels to manage services.</p>
+</li>
 <li>
 <p>Upstart: An event-based replacement for sysVinit, designed for faster booting.</p>
 </li>
@@ -1465,17 +1535,25 @@ Swap File: A regular file on a filesystem used for swap space, providing more fl
 <p>To check swap memory on a Linux system, you can use various commands.
 The free -h command provides a human-readable summary of memory usage, including swap. The swapon --show command lists swap devices and their usage, while <code>cat /proc/swaps</code> displays a detailed view of currently used swap spaces.</p>
 <h2 id="pseudo-filesystem">Pseudo Filesystem</h2>
-<p>A pseudo filesystem is a filesystem that doesn't exist on physical storage but represents system information. An example is /proc, which provides insights into system and process information dynamically.</p>
-<p>Another nice example is /tmp which is often used for temporary files.</p>
+<p>A pseudo filesystem is a filesystem that doesn't exist on physical storage but represents system information. An example is <code>/proc</code>, which provides insights into system and process information dynamically.</p>
+<p>Another nice example is <code>/tmp</code> which is often used for temporary files.</p>
 <h2 id="linux-permissions">Linux Permissions</h2>
 <p>Linux utilizes a permission system to control access to files and directories. Each file has three types of permissions for three categories of users: owner, group, and others (read, write, execute).
 Permissions are often shown using a string of characters (e.g. <code>rwxr-xr--</code>).</p>
-<p>For more information, please check https://vaxeman.github.io/l2docs/linux/permissions.html</p>
+<p>For more information, please check <a href="https://vaxeman.github.io/l2docs/linux/permissions.html">here</a>.</p>
 <h2 id="find-vs-locate-commands">Find vs. Locate Commands</h2>
-<p>find: Searches for files in a directory hierarchy based on various criteria. It's slower but more powerful and accurate because it searches the filesystem in real time.
-locate: Uses a pre-built database to find files quickly. It’s faster but may not be up to date. Use <code>updatedb</code> to refresh the database.</p>
-<p>When to use them, you may ask?
-Essentially, select find for detailed or immediate searches and locate for simple, rapid filename lookups.</p>
+<ul>
+<li>
+<p><code>find</code>: Searches for files in a directory hierarchy based on various criteria. It's slower but more powerful and accurate because it searches the filesystem in real time.</p>
+</li>
+<li>
+<p><code>locate</code>: Uses a pre-built database to find files quickly. It’s faster but may not be up to date. Use <code>updatedb</code> to refresh the database.</p>
+</li>
+</ul>
+<details class="question">
+<summary>When to use them, you may ask?</summary>
+<p>Essentially, select <code>find</code> for detailed or immediate searches and <code>locate</code> for simple, rapid filename lookups.</p>
+</details>
 <h2 id="mount-command">Mount Command</h2>
 <p>The mount command is used to attach a filesystem (like a hard drive or USB) to a specified directory in the Linux directory tree, making it accessible.</p>
 <p>The basic syntax of the mount command is:</p>
