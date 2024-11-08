@@ -1468,13 +1468,13 @@ One of the main advantages of UEFI is its support for much larger drives—over 
 <p>Common Bootloaders:</p>
 <ul>
 <li>
-<p>GRUB (GNU Grand Unified Bootloader): The most widely used bootloader in Linux systems.</p>
+<p><strong>GRUB</strong> (GNU Grand Unified Bootloader): The most widely used bootloader in Linux systems.</p>
 </li>
 <li>
-<p>LILO (Linux Loader): An older bootloader that's largely obsolete.</p>
+<p><strong>LILO</strong> (Linux Loader): An older bootloader that's largely obsolete.</p>
 </li>
 <li>
-<p>Syslinux: A simpler bootloader often used for booting from USB drives.</p>
+<p><strong>Syslinux</strong>: A simpler bootloader often used for booting from USB drives.</p>
 </li>
 </ul>
 <h2 id="linux-kernel">Linux Kernel</h2>
@@ -1482,16 +1482,16 @@ One of the main advantages of UEFI is its support for much larger drives—over 
 <p>Four Main Kernel Roles:</p>
 <ol>
 <li>
-<p>Process Management: Handles process scheduling and CPU time allocation.</p>
+<p><strong>Process Management</strong>: Handles process scheduling and CPU time allocation.</p>
 </li>
 <li>
-<p>Memory Management: Manages system memory and the resources allocated to processes.</p>
+<p><strong>Memory Management</strong>: Manages system memory and the resources allocated to processes.</p>
 </li>
 <li>
-<p>Device Management: Provides a communication layer for hardware drivers and userspace applications.</p>
+<p><strong>Device Management</strong>: Provides a communication layer for hardware drivers and userspace applications.</p>
 </li>
 <li>
-<p>File System Management: Manages file operations and access to various file systems.</p>
+<p><strong>File System Management</strong>: Manages file operations and access to various file systems.</p>
 </li>
 </ol>
 <h2 id="daemons-and-init-systems">Daemons and Init Systems</h2>
@@ -1519,27 +1519,33 @@ The process ID (PID) of the init process is 1.</p>
 <p>Init Systems:</p>
 <ul>
 <li>
-<p>sysVinit: The traditional init system using run levels to manage services.</p>
+<p><strong>sysVinit</strong>: The traditional init system using run levels to manage services.</p>
 </li>
 <li>
-<p>Upstart: An event-based replacement for sysVinit, designed for faster booting.</p>
+<p><strong>Upstart</strong>: An event-based replacement for sysVinit, designed for faster booting.</p>
 </li>
 <li>
-<p>systemd: A modern init system that uses units and targets, providing parallelization and improved service management.</p>
+<p><strong>systemd</strong>: A modern init system that uses units and targets, providing parallelization and improved service management.</p>
 </li>
 </ul>
 <h2 id="swap-memory">SWAP Memory</h2>
 <p>SWAP memory is a space on a hard drive used as virtual memory when physical RAM is full. </p>
-<p>Swap Partition: A dedicated area of the hard drive designated for swap space.
-Swap File: A regular file on a filesystem used for swap space, providing more flexibility than a partition.</p>
+<ul>
+<li>
+<p><strong>Swap Partition</strong>: A dedicated area of the hard drive designated for swap space.</p>
+</li>
+<li>
+<p><strong>Swap File</strong>: A regular file on a filesystem used for swap space, providing more flexibility than a partition.</p>
+</li>
+</ul>
 <p>To check swap memory on a Linux system, you can use various commands.
-The free -h command provides a human-readable summary of memory usage, including swap. The swapon --show command lists swap devices and their usage, while <code>cat /proc/swaps</code> displays a detailed view of currently used swap spaces.</p>
+The <code>free -h</code> command provides a human-readable summary of memory usage, including swap. The swapon <code>--show</code> command lists swap devices and their usage, while <code>cat /proc/swaps</code> displays a detailed view of currently used swap spaces.</p>
 <h2 id="pseudo-filesystem">Pseudo Filesystem</h2>
 <p>A pseudo filesystem is a filesystem that doesn't exist on physical storage but represents system information. An example is <code>/proc</code>, which provides insights into system and process information dynamically.</p>
 <p>Another nice example is <code>/tmp</code> which is often used for temporary files.</p>
 <h2 id="linux-permissions">Linux Permissions</h2>
-<p>Linux utilizes a permission system to control access to files and directories. Each file has three types of permissions for three categories of users: owner, group, and others (read, write, execute).
-Permissions are often shown using a string of characters (e.g. <code>rwxr-xr--</code>).</p>
+<p>Linux utilizes a permission system to control access to files and directories. Each file has three types of permissions for three categories of users: <code>owner</code>, <code>group</code>, and <code>others</code> (<code>read</code>, <code>write</code>, <code>execute</code>).</p>
+<p>Permissions are often shown using a string of characters (e.g. <code>rwxr-xr--</code>).</p>
 <p>For more information, please check <a href="https://vaxeman.github.io/l2docs/linux/permissions.html">here</a>.</p>
 <h2 id="find-vs-locate-commands">Find vs. Locate Commands</h2>
 <ul>
@@ -1568,8 +1574,8 @@ To mount a USB drive located at <code>/dev/sdb1</code> to a directory called <co
 <p>Unmounting</p>
 <p>To detach or unmount a filesystem, you use the umount command followed by the mount point or the device name. This is crucial for safely removing the device, ensuring all data is written back and the filesystem is no longer in use.</p>
 <h2 id="iptables-and-csfapf">IPtables and CSF/APF</h2>
-<p>IPtables: A user-space utility that allows an administrator to configure firewall rules within the Linux kernel, controlling incoming and outgoing traffic.</p>
-<p>CSF (ConfigServer Security &amp; Firewall) and APF (Advanced Policy Firewall): Tools that use iptables to provide a frontend for managing firewall rules and enhancing security.</p>
+<p><strong>IPtables</strong>: A user-space utility that allows an administrator to configure firewall rules within the Linux kernel, controlling incoming and outgoing traffic.</p>
+<p><strong>CSF</strong> (ConfigServer Security &amp; Firewall) and <strong>APF</strong> (Advanced Policy Firewall): Tools that use iptables to provide a frontend for managing firewall rules and enhancing security.</p>
 <p>Linux Filesystem Structure</p>
 <ul>
 <li>
@@ -1615,10 +1621,10 @@ The renice command changes the nice level of a running process.
 For example, renice -n 10 1234 will change the nice level of the process with PID 1234 to 10.</p>
 <h2 id="umask">Umask</h2>
 <p>Umask is a user file-creation mask controlling the default file permissions given when a new file or directory is created. It specifies which permission bits should be disabled by default.
-The umask value is subtracted from the maximum permissions for files and directories, which are 666 and 777.</p>
+The umask value is subtracted from the maximum permissions for files and directories, which are <code>666</code> and <code>777</code>.</p>
 <details class="question">
 <summary>Which of the following settings for umask ensures that new files have the default permissions <code>-rw-r-----</code>?</summary>
-<p>The correct setting for umask that ensures that new files have the default permissions -rw- r----- is 0027.
+<p>The correct setting for umask that ensures that new files have the default permissions <code>-rw- r-----</code> is <code>0027</code>.
 Since the first digit of the umask value is for the special permissions, such as setuid, setgid, and sticky bit, we need to add a zero at the beginning to indicate that no special permissions are set.</p>
 </details>
 
