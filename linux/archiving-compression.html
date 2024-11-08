@@ -777,7 +777,7 @@
           <li class="md-nav__item">
   <a href="#tar" class="md-nav__link">
     <span class="md-ellipsis">
-      * tar
+      tar
     </span>
   </a>
   
@@ -786,7 +786,7 @@
           <li class="md-nav__item">
   <a href="#zip" class="md-nav__link">
     <span class="md-ellipsis">
-      * zip
+      zip
     </span>
   </a>
   
@@ -803,6 +803,30 @@
       Common Compression Tools
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Common Compression Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      gzip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xz" class="md-nav__link">
+    <span class="md-ellipsis">
+      xz
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1266,7 +1290,7 @@
           <li class="md-nav__item">
   <a href="#tar" class="md-nav__link">
     <span class="md-ellipsis">
-      * tar
+      tar
     </span>
   </a>
   
@@ -1275,7 +1299,7 @@
           <li class="md-nav__item">
   <a href="#zip" class="md-nav__link">
     <span class="md-ellipsis">
-      * zip
+      zip
     </span>
   </a>
   
@@ -1292,6 +1316,30 @@
       Common Compression Tools
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Common Compression Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      gzip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xz" class="md-nav__link">
+    <span class="md-ellipsis">
+      xz
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1327,7 +1375,7 @@
 <h3 id="what-is-compression">What is Compression?</h3>
 <p>Compression refers to reducing the size of files to save storage space or to speed up data transfer. Compression can be lossless, meaning the original file can be perfectly reconstructed from the compressed data, or lossy, which sacrifices some detail for better space efficiency.</p>
 <h2 id="common-archiving">Common Archiving</h2>
-<h3 id="tar">* <strong>tar</strong></h3>
+<h3 id="tar"><strong>tar</strong></h3>
 <p>The <code>tar</code> command (short for "tape archive") is one of the most widely used tools for creating archive files in Linux. It preserves file attributes such as permissions and timestamps, making it ideal for backups.</p>
 <p><strong>Basic Commands:</strong></p>
 <p>Create an archive: Use the <code>-c</code> option to create an archive. The <code>-v</code> option displays the progress, and the <code>-f</code> option specifies the output filename.
@@ -1351,7 +1399,7 @@
 <p>Extract a compressed archive:
   <div class="highlight"><pre><span></span><code><span class="go">tar -xJvf archive.tar.xz</span>
 </code></pre></div></p>
-<h3 id="zip">* <strong>zip</strong></h3>
+<h3 id="zip"><strong>zip</strong></h3>
 <p>The <code>zip</code> utility combines archiving and compression into a single step.</p>
 <p><strong>Basic Commands:</strong></p>
 <p>Create a ZIP archive: The <code>-r</code> option allows you to include subdirectories recursively.
@@ -1370,9 +1418,7 @@
   <div class="highlight"><pre><span></span><code><span class="go">zip -d archive.zip filetoremove.txt</span>
 </code></pre></div></p>
 <h2 id="common-compression-tools">Common Compression Tools</h2>
-<ul>
-<li><strong>gzip</strong></li>
-</ul>
+<h3 id="gzip"><strong>gzip</strong></h3>
 <p><code>gzip</code> (GNU zip) is a popular compression tool that reduces the size of individual files. It works well for text files and can achieve a significant reduction in size.</p>
 <p><strong>Basic Commands:</strong></p>
 <p>Compress a file: This replaces the original file with a compressed version ending in <code>.gz</code>.
@@ -1387,9 +1433,7 @@
 <p>View compressed file information:
   <div class="highlight"><pre><span></span><code><span class="go">gzip -l file.txt.gz</span>
 </code></pre></div></p>
-<ul>
-<li><strong>xz</strong></li>
-</ul>
+<h3 id="xz"><strong>xz</strong></h3>
 <p><code>xz</code> is another compression tool that provides a higher compression ratio than <code>gzip</code>, making it suitable for larger files.</p>
 <p><strong>Basic Commands:</strong></p>
 <p>Compress a file: Similar to <code>gzip</code>, this will convert <code>file.txt</code> to <code>file.txt.xz</code>.
